@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+html, body {
+    height: 100%; margin: 0; width: 100%;
+}
+
+body{
+    background-color: black; display: flex; flex-direction: column;
+    font-family: "Poppins", sans-serif; font-weight: 400;
+}
+.navbar {
+    display: flex; 
+    justify-content: space-between; 
+    background: #3D3D3D; 
+    
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar * {
+    align-items: center; 
+}
+
+.logo {
+    font-size: .8rem; 
+    font-weight: 400; 
+    display: flex;
+}
+.logo img {
+    width: 3rem; margin: 1.2rem;
+}
+.logo>p {
+    width: 10rem; color: #fffaec;
+}
+.nav-links ul {
+    display: flex; 
+    gap: 2rem; font-weight: 200;
+    list-style: none; color: #F5ECD4;
+}
+ul button {
+    border-radius: 0%; background-color: black; color: white;
+    
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: black; 
+}
+.hero-image {
+     /* top: 0; left: 0;bottom: 0; right: 0;   */
+    display: flex; height: 100vh; width: 100vw;  
+    background-size: cover; background-image: url("images/Services Pics/Brush Clearing_after.jpg");
+    display: flex; flex-direction: column; justify-content: center;
+}
+.hero-image * {
+    align-self: center; color: white; 
+}
+.hero-image h1 {
+    color: white; margin-bottom: -10px;
+}
+
+.hero-image p {
+    display: flex; justify-content: center; color: white; 
+    font-size: 1.5rem; font-weight: 300;
+}
+
+.hero-image>button {
+    align-self: center; height: 40px; width: 180px; background-color: #183d3d;
+    color: white; font-weight: 300; font-size: large; border: none;
+}   
+h1 {
+    font-family: "Poppins"; font-weight: 600;
+    color: #fffaec; font-size: 5rem; 
+}
+h2 {
+    font-family: "Poppins"; font-weight: 600;
+    color: white; font-size: 4rem;
+}
+h3 {
+    color: white;
+}
+p{
+    color: white;
+}
+
+.why-us h2 {
+    display: flex; justify-content: center; margin-top: 50px;
+}
+.reasons {
+    display: flex; justify-content: center;
+}
+.Professional {
+     display: flex; flex-direction: column; justify-content: center; width: 400px; height: 200px;
+     margin-left: 30px; margin-right: 30px; text-align: center; background-color: #F5ECD4;
+     padding: 30px; font-weight: 300;
+}
+.Professional h3 {
+    display: flex; justify-content: center; text-transform: capitalize; color: #3D3D3D;
+    font-size: 1.4rem;
+}
+.Professional p {
+    color:#578E7E; 
+}
+.Trustworthy {
+    display: flex; flex-direction: column; justify-content: center; width: 400px; height: 200px;
+    margin-left: 30px; margin-right: 30px; text-align: center; background-color: #F5ECD4; 
+    padding: 30px; font-weight: 300;
+}
+.Trustworthy h3 {
+    text-transform: capitalize; color: #3D3D3D; font-size: 1.4rem;
+}
+.Trustworthy p {
+    color:#578E7E; 
+}
+.request {
+    display: flex; flex-direction: column; justify-content: center; width: 400px; height: 200px;
+    margin-left: 30px; margin-right: 30px;  font-weight: 300;  background-color: #F5ECD4; padding: 30px;
+    text-align: center;
+}
+.request h3 {
+    text-transform: capitalize; color: #3D3D3D; font-size: 1.4rem;
+}
+.request p {
+    color:#578E7E; 
+}
+
+.can-do {
+    display: flex; flex-direction: column; align-items: center; text-transform: capitalize;
+}
+.can-do h3 {
+    margin-top: -40px; font-weight: 300;
+}
+.services {
+    display: flex;
+    flex-direction: column; margin-top: 40px;
+}
+.service-groups {
+    display: flex;  justify-content: center;
+}
+.service-offering {
+    width: 300px; height: 300px; display: flex; flex-direction: column; align-items: center; padding: 20px;
+    justify-content: center; border: 3px; border-color: #3D3D3D;
+    border-style: double; margin: 10px; 
+}
+.service-offering h3 {
+    color: #F5ECD4; font-weight: 600; text-align: center;
+}
+.service-offering p {
+    text-align: center; font-weight: 300; color: #578E7E; font-size: .9rem;
+}
+.service-offering a {
+    color: #3D3D3D;
+}
+.service-groups img {
+    width: 80px;
+}
+.service-button {
+    display: flex; justify-content: center; margin: 40px;
+}
+button {
+    width: 180px; height: 50px; border-radius: 40px; font-family: "Poppins", sans-serif; font-size: 1rem;
+    font-weight: 400; text-transform: capitalize; background-color: #F5ECD4; color: #578E7E;
+    border: none;
+}
+.testimonials {
+    background-color: #F5ECD4;
+}
+.testimonials h2 {
+    font-family: "Poppins", sans-serif; text-transform: capitalize; text-align: center; display: flex;
+    flex-direction: column; color: #3D3D3D; 
+}
+.testimonial-comments {
+    display: flex; flex-direction: row; font-size: small; justify-content: center;
+    margin-bottom: 100px; 
+}
+.comment {
+    width: 400px; margin-left: 50px; margin-right: 50px;
+}
+.comment p {
+    color: #578E7E;
+}
+.comment h2 {
+    font-size: 1.3rem; text-align: left; margin-top: -5px;
+}
+.comment h4 {
+    margin-top: -20px; font-weight: 300; 
+}
+
+/* Services page Starts here */
+.services-heading {
+    display: flex; flex-direction: column; align-items: center;
+    font-family: "Poppins", sans-serif; margin-top: 80px; 
+    width: 100%; height: 100%;
+}
+.services-heading h3 {
+    margin-top: -50px; margin-bottom: 80px; font-weight: 400;
+}
+.heading-text {
+    text-align: center;
+}
+
+.services-heading img {
+    width: 80%; height: 500px;
+}
+.service-collection {
+    display: flex; flex-direction: column; align-items: center; 
+    margin-top: 8%; 
+}
+.service-details {
+    display: flex; border: #3D3D3D double; width: 80%; min-height: fit-content;
+    margin: 20px; padding: 1%;
+}
+.service-details img {
+    width: 400px; align-self: flex-start; margin-top: 15px;
+}
+.detail {
+    display: flex; flex-direction: column; padding-left: 2%; padding-right: 2%;
+    width: 100%;
+}
+.detail h2 {
+    font-family: "Poppins", sans-serif; font-weight: 600; font-size: 3rem;
+    margin-top: -2px;
+}
+.detail p {
+    width: 100%; text-align: justify; font-weight: 300; margin-top: -20px;
+}
