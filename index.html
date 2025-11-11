@@ -6,8 +6,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css"/>
     <title>Loewen Property Works</title>
+    <style>
+        body {
+            margin: 0; /* Remove default body margin */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        .hero-image {
+            width: 100%; /* Ensure it spans the full width of the viewport */
+            height: 100vh;
+            margin: 0; /* Remove any margin */
+            padding: 0; /* Remove any padding */
+            overflow: hidden; /* Prevent content overflow */
+        }
+
+        .hero-image img {
+            width: 100%; /* Ensure images fit within the container */
+            display: block; /* Remove inline spacing caused by images */
+        }
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -18,20 +38,57 @@
             </div> 
             <div class="nav-links">          
                     <ul>
-                        <li><a href="#features">Home</a></li>
-                        <li><a href="#benefits">About Us</a></li>
-                        <li><a href="#faq">Our Services</a></li>
-                        <li><a href="#faq">Contact Us</a></li>
-                        <li><button>Call Us</button></li>
+                        <li class="nav-items"><a href="/index.html">Home</a></li>
+                        <li class="nav-items"><a href="/about-us.html">About Us</a></li>
+                        <li class="nav-items"><a href="/services.html">Our Services</a></li>
+                        <li class="nav-items"><a href="/contact-us.html">Contact Us</a></li>                        
+                        <li><a href="tel:+"><button>Call Us</button></a></li>
                     </ul>
             </div>
         <!-- </nav> -->
     </div>
+    
+        
+    </div>
     <div class="hero">
         <div class="hero-image">
+            <div class="slide active">
+                <img src="images/hero_banner/Leaf_removal_before.jpg" alt="Before Leaf removal">
+            </div>
+            <div class="slide">
+                <img src="images/hero_banner/Leaf_removal_after.jpg" alt="After leaf removal">
+            </div>
+            <div class="slide">
+                <img src="images/hero_banner/Brush_cutting_before.jpg" alt="Before Brush cutting">
+            </div>
+            <div class="slide">
+                <img src="images/hero_banner/Brush Clearing_after.jpg" alt="After brush cutting">
+            </div>
+            <div class="slide">
+                <img src="images/hero_banner/Demolition_before.jpg" alt="Before demolition">
+            </div>
+            <div class="slide">
+                <img src="images/hero_banner/Demolition_after.jpg" alt="After Demolition">
+            </div>
+            <div class="slide">
+                <img src="images/hero_banner/Sodding_before.jpg" alt="Before Sodding">
+            </div>
+            <div class="slide">
+                <img src="images/hero_banner/Sodding_after.jpg" alt="After Sodding">
+            </div>
+            <div class="slide">
+                <img src="images/hero_banner/Grass_cutting_before.jpg" alt="Before Grass cutting">
+            </div>
+            <div class="slide">
+                <img src="images/hero_banner/Grass_cutting_after.jpg" alt="After grass cutting">
+            </div>
+        <div class="hero-text">
             <h1>Green. Clean. Done.</h1>
             <p>Personalised yard care, right in your backyard</p>
-            <button>Contact Us</button>
+            <a href="contact-us.html">
+                <button>Contact Us</button>
+            </a>
+        
         </div>
     </div>
     <div class="why-us">
@@ -59,146 +116,230 @@
     <div class="services">
         <div class="service-groups">
             <div class="service-offering">
-                <img src="images/icons/1x/Brush_clearing_white.png"/>
+                <a href="services.html#brush-clearing-section">
+                    <img src="images/icons/1x/Brush_clearing_white.png"/>
+                </a>
                 <h3>Brush Clearing</h3>
                 <p>Do you have unwanted brush? We can remove it. Is it the DENSE THORNY stuff? We love it!</p>
-                <a href="services.html">Learn more</a>
+                <a href="services.html#brush-clearing-section">Learn more</a>
             </div>
             <div class="service-offering">
-                <img src="images/icons/1x/tree cuttingAsset 3_1.png"/>
+                <a href="services.html#tree-cutting-section"><img src="images/icons/1x/tree cuttingAsset 3_1.png"/></a>
                 <h3>Tree Cutting</h3>
                 <p>Anything that can be reached from the ground- small trees, lower limbs 
                     (up to about 10' up), larger trees if can fall safely, cutting up already felled trees</p>
-                <a href="services.html">Learn more</a>
+                <a href="services.html#tree-cutting-section">Learn more</a>
             </div>
             <div class="service-offering">
-                <img src="images/icons/1x/demolitionAsset 5_1.png"/>
+                <a href="services.html#demolition-section">
+                    <img src="images/icons/1x/demolitionAsset 5_1.png"/>
+                </a>
                 <h3>Demolition</h3>
                 <p>Outdoors- smaller outdoor structures such as decks and sheds; Indoors- just about anything required for renovations, includes wallpaper removal, carpet removal, hard flooring removal, drywall removal, basement stud removal​</p>
-                <a href="services.html">Learn more</a>
+                <a href="services.html#demolition-section">Learn more</a>
             </div>
             <div class="service-offering">
-                <img src="images/icons/1x/PruningAsset 4_1.png"/>
+                <a href="services.html#pruning-section">
+                    <img src="images/icons/1x/PruningAsset 4_1.png"/>
+                </a>
                 <h3>Pruning</h3>
                 <p>Removing deadwood and unwanted branches (to about 10-12' up); shaping bushes and small trees</p>
-                <a href="services.html">Learn more</a>
+                <a href="services.html#pruning-section">Learn more</a>
             </div>
         </div>
         <!-- End of service group 1 -->
         <div class="service-groups">
             <div class="service-offering">
-                <img src="images/icons/1x/soddingAsset 6_1.png"/>
+                <a href="services.html#sodding-seeding-section">
+                    <img src="images/icons/1x/soddingAsset 6_1.png"/>
+                </a>
                 <h3>Sodding/ Seeding</h3>
                 <p>Professionally preparing ground; expertly laying sod or spreading grass seed.</p>
-                <a href="services.html">Learn more</a>
+                <a href="services.html#sodding-seeding-section">Learn more</a>
             </div>
             <div class="service-offering">
-                <img src="images/icons/1x/Flower bedAsset 7_1.png"/>
+                <a href="services.html#flower-shrubs-section">
+                    <img src="images/icons/1x/Flower bedAsset 7_1.png"/>
+                </a>
                 <h3>Flower/ Shrubs Beds</h3>
                 <p>Design, construct, maintenance, re-edging; specializing in WEED REMOVAL </p>
-                <a href="services.html">Learn more</a>
+                <a href="services.html#flower-shrubs-section">Learn more</a>
             </div>
             <div class="service-offering">
-                <img src="images/icons/1x/Lawn mowerAsset 2_1.png"/>
+                <a href="services.html#grass-cutting-section">
+                    <img src="images/icons/1x/Lawn mowerAsset 2_1.png"/>
+                </a>
                 <h3>Grass Cutting</h3>
                 <p>Including TALL (3 - 4 feet) grass</p>
-                <a href="services.html">Learn more</a>
+                <a href="services.html#grass-cutting-section">Learn more</a>
             </div>
             <div class="service-offering">
-                <img src="images/icons/1x/Leaf CleanupAsset 8_1.png"/>
+                <a href="services.html#leaf-cleanup-section">
+                    <img src="images/icons/1x/Leaf CleanupAsset 8_1.png"/>
+                </a>
                 <h3>Leaf Cleanup</h3>
                 <p>Raking and bagging (yard waste bags), with the option of hauling away if there's a large amount</p>
-                <a href="services.html">Learn more</a>
+                <a href="services.html#leaf-cleanup-section">Learn more</a>
             </div>
         </div>
         <!-- End of service group 2 -->
         <div class="service-groups">                
             <div class="service-offering">
-                <img src="images/icons/1x/Junk sortingAsset 9_1.png"/>
+                <a href="services.html#junk-sorting-section">
+                    <img src="images/icons/1x/Junk sortingAsset 9_1.png"/>
+                </a>
                 <h3>Junk Sorting/ recycling/ Disposal</h3>
                 <p>Outdoor and indoor</p>
-                <a href="services.html">Learn more</a>
+                <a href="services.html#junk-sorting-section">Learn more</a>
             </div>
             <div class="service-offering">
-                <img src="images/icons/1x/Yard CleanupAsset 10_1.png"/>
+                <a href="services.html#yard-cleanup-section">
+                    <img src="images/icons/1x/Yard CleanupAsset 10_1.png"/>
+                </a>
                 <h3>General Yard Cleanup</h3>
                 <p>Combining several of the previous</p>
-                <a href="services.html">Learn more</a>
+                <a href="services.html#yard-cleanup-section">Learn more</a>
             </div>
             <div class="service-offering">
-                <img src="images/icons/1x/PaintingAsset 11_1.png"/>
-                <h3>Pruning</h3>
+                <a href="services.html#painting-section">
+                    <img src="images/icons/1x/PaintingAsset 11_1.png"/>
+                </a>
+                <h3>Painting</h3>
                 <p>Outside walls & structures; Inside surfaces (walls, trim, ceilings)</p>
-                <a href="services.html">Learn more</a>
+                <a href="services.html#painting-section">Learn more</a>
             </div>
             <div class="service-offering">
-                <img src="images/icons/1x/Snow ClearingAsset 12.png"/>
+                <a href="services.html#snow-clearing-section">
+                    <img src="images/icons/1x/Snow ClearingAsset 12.png"/>
+                </a>
                 <h3>Snow Clearing</h3>
                 <p>Sidewalks, driveways and small parking lots</p>
-                <a href="services.html">Learn more</a>
+                <a href="services.html#snow-clearing-section">Learn more</a>
             </div>
         </div>
         <!-- End of service group 3 -->
         <div class="service-groups">
             <div class="service-offering">
-                <img src="images/icons/1x/Hydro connection digAsset 1_white.png"/>
+                <a href="services.html#hydro-digs-section">
+                    <img src="images/icons/1x/Hydro connection digAsset 1_white.png"/>
+                </a>
                 <h3>Hydro Connection Location Digs</h3>
                 <p>Digging to find where buried cables going to the house join to 
                     the main utility supply lines - these must be hand dug</p>
-                <a href="services.html">Learn more</a>
+                <a href="services.html#hydro-digs-section">Learn more</a>
             </div>
             <div class="service-offering">
-                <img src="images/icons/1x/Hardwood floorAsset_white.png"/>
+                <a href="services.html#hardwood-flooring-section">
+                    <img src="images/icons/1x/Hardwood floorAsset_white.png"/>
+                </a>
                 <h3>Hardwood Floor refinishing</h3>
                 <p>Includes sanding old floor and application of polyurethane</p>
-                <a href="services.html">Learn more</a>
+                <a href="services.html#hardwood-flooring-section">Learn more</a>
             </div>
             <div class="service-offering">
-                <img src="images/icons/1x/Cleaning icon_white.png"/>
-                <h3>Demolition</h3>
+                <a href="services.html#cleaning-section">
+                    <img src="images/icons/1x/Cleaning icon_white.png"/>
+                </a>
+                <h3>Cleaning</h3>
                 <p>Especially particularly dirty situations</p>
-                <a href="services.html">Learn more</a>
+                <a href="services.html#cleaning-section">Learn more</a>
             </div>
             <div class="service-offering">
-                <img src="images/icons/Handyman icon_white.png"/>
+                <a href="services.html#handyman-repairs-section">
+                    <img src="images/icons/Handyman icon_white.png"/>
+                </a>
                 <h3>Other Handyman repairs</h3>
                 <p>ust ask to see if we can do what you have in mind</p>
-                <a href="services.html">Learn more</a>
+                <a href="services.html#handyman-repairs-section">Learn more</a>
             </div>
             
         </div>
+    </div>
         <!-- End of service group 4 -->
         <!-- Learn More Service button below -->
         <div class="service-button">
-            <button type="button"><span>Learn more</span></button>
+            <a href="services.html">
+                <button type="button"><span>Learn more</span></button>
+            </a>
         </div>
-    <div class="testimonials">
-        <h2>Hear from our customers</h2>
-        <div class="testimonial-comments">        
-            <div class="comment">
-                <p>"Rob was easy to work with! He understood exactly what I needed done and completed it as 
-                    requested. He was a conscientious worker and worked efficiently. I would definitely 
-                    recommend Rob!" </p>
-                <h2>Wendy</h2>
-                <h4>Property located in eastside of Waterloo</h4>
+        <div class="testimonials">
+            <h2>Hear from our customers</h2>
+            <div class="testimonial-comments">        
+                <div class="comment">
+                    <p>"Rob was easy to work with! He understood exactly what I needed done and completed it as 
+                        requested. He was a conscientious worker and worked efficiently. I would definitely 
+                        recommend Rob!" </p>
+                    <h2>Wendy</h2>
+                    <h4>Property located in eastside of Waterloo</h4>
+                </div>
+                <div class="comment">
+                    <p>I want to express my gratitude to Rob for his excellent work trimming and bushwhacking at our home. He was punctual, 
+                        worked tirelessly and always cleaned up after his cuttings. He listens carefully to your requests and followed through on schedule. 
+                        Rob is a nice, kind, pleasant guy to have around. You'll be very pleased as we were. .” </p>
+                    <h2>Gail</h2>
+                    <h4>Property located just outside Waterloo</h4>
+                </div>
+                <div class="comment">
+                    <p>“I contacted Rob last year for snow removal in Cambridge. 
+                        He did good job and most importantly on time. I strongly recommend him.” </p>
+                    <h2>Paramjit Soor</h2>
+                    <h4>Property located in west side of Cambridge</h4>
+                </div>
             </div>
-            <div class="comment">
-                <p>I want to express my gratitude to Rob for his excellent work trimming and bushwhacking at our home. He was punctual, 
-                    worked tirelessly and always cleaned up after his cuttings. He listens carefully to your requests and followed through on schedule. 
-                    Rob is a nice, kind, pleasant guy to have around. You'll be very pleased as we were. .” </p>
-                <h2>Gail</h2>
-                <h4>Property located just outside Waterloo</h4>
+        </div>
+
+        <!--============ The footer=========== -->
+        <!-- ================================= -->
+    <div class="footer">    
+        
+        <div class="footer-top">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/loewenpropertyworks" class="fa fa-facebook"></a>           
+                <a href="https://www.linkedin.com/in/robloewen/" class="fa fa-linkedin"></a>
             </div>
-            <div class="comment">
-                <p>“I contacted Rob last year for snow removal in Cambridge. 
-                    He did good job and most importantly on time. I strongly recommend him.” </p>
-                <h2>Paramjit Soor</h2>
-                <h4>Property located in west side of Cambridge</h4>
+            <div class="footer-text">
+                <p>Phone: +15195882264</p>
+                <p>Email: robl@loewenpropertyworks.ca</p>
             </div>
+            <div id="back-to-top">
+                <a href="#top">BACK TO TOP</a>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Loewen Property Works Inc. All rights reserved.</p>
+            <p id="orban-forest">Design by Orban Forest Inc.</p>
         </div>
     </div>
 
-        </div>
-    </div>
+
+        
+    
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+        const intervalTime = 5000; // Time between transitions in milliseconds (adjust as needed)
+
+        function nextSlide() {
+            // Deactivate current slide
+            slides[currentIndex].classList.remove('active');
+            slides[currentIndex].style.transform = 'scale(1)'; // Reset scale
+
+            // Move to the next slide
+            currentIndex = (currentIndex + 1) % slides.length;
+
+            // Activate the next slide
+            slides[currentIndex].classList.add('active');
+            slides[currentIndex].style.transform = 'scale(1.1)'; // Apply initial scale
+        }
+
+        // Initialize the slider
+        slides[0].classList.add('active');
+        slides[0].style.transform = 'scale(1.1)';
+
+        // Set up the interval for automatic sliding
+        setInterval(nextSlide, intervalTime);
+    </script>
 </body>
 </html>
