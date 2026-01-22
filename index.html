@@ -212,11 +212,13 @@ Last winter was especially heavy with snow, and Rob did a fantastic job keeping 
             </div>
         </div>
         <div class="carousel-indicators" id="carousel-indicators">
-            <button class="indicator active" data-index="0" aria-label="Go to testimonial group 1"></button>
-            <button class="indicator" data-index="1" aria-label="Go to testimonial group 2"></button>
-            <button class="indicator" data-index="2" aria-label="Go to testimonial group 3"></button>
-            <button class="indicator" data-index="3" aria-label="Go to testimonial group 4"></button>
-            <button class="indicator" data-index="4" aria-label="Go to testimonial group 5"></button>
+            <button class="indicator active" data-index="0" aria-label="Go to testimonial 1"></button>
+            <button class="indicator" data-index="1" aria-label="Go to testimonial 2"></button>
+            <button class="indicator" data-index="2" aria-label="Go to testimonial 3"></button>
+            <button class="indicator" data-index="3" aria-label="Go to testimonial 4"></button>
+            <button class="indicator" data-index="4" aria-label="Go to testimonial 5"></button>
+            <button class="indicator" data-index="5" aria-label="Go to testimonial 6"></button>
+            <button class="indicator" data-index="6" aria-label="Go to testimonial 7"></button>
         </div>
     </section>
 
@@ -517,10 +519,7 @@ Last winter was especially heavy with snow, and Rob did a fantastic job keeping 
 
             // Calculate cards visible based on viewport
             function getCardsVisible() {
-                const width = window.innerWidth;
-                if (width <= 768) return 1;
-                if (width <= 1024) return 2;
-                return 3;
+                return 1; // Always show one testimonial at a time
             }
 
             // Get card dimensions

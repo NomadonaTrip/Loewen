@@ -549,10 +549,10 @@ button:hover {
 
 .customer-testimonials {
   background-color: var(--primary-dark);
-  padding: 80px 0 60px;
+  padding: 72px 0 54px;
   overflow: hidden;
   position: relative;
-  flex-shrink: 0;
+  flex-shrink: 0; /* Prevent flex collapse when body is flex container */
 }
 
 .customer-testimonials h2 {
@@ -560,7 +560,7 @@ button:hover {
   color: var(--text-light);
   font-size: 2.25rem;
   font-weight: 600;
-  margin: 0 0 50px 0;
+  margin: 0 0 45px 0;
   text-transform: none;
 }
 
@@ -584,57 +584,44 @@ button:hover {
 }
 
 .testimonial-card {
-  flex: 0 0 calc((100% - 40px) / 3);
-  min-width: calc((100% - 40px) / 3);
-  max-width: calc((100% - 40px) / 3);
-  background: linear-gradient(
-    145deg,
-    rgba(50, 55, 60, 0.9),
-    rgba(30, 33, 36, 0.95)
-  );
-  border-radius: 16px;
+  flex: 0 0 100%;
+  min-width: 100%;
+  max-width: 100%;
+  background: transparent;
   padding: 28px;
   position: relative;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.05);
   box-sizing: border-box;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    0 0 20px rgba(24, 61, 61, 0.2);
+  text-align: center;
 }
 
 .quote-mark {
   font-size: 5rem;
   font-family: Georgia, serif;
-  color: var(--accent-green);
+  color: var(--text-green);
   opacity: 0.4;
   line-height: 1;
-  position: absolute;
-  top: 16px;
-  left: 24px;
+  position: relative;
+  top: 0;
+  left: 0;
   user-select: none;
 }
 
 .testimonial-text {
   color: var(--text-cream);
+  font-family: var(--font-heading);
   font-size: 1rem;
   line-height: 1.7;
-  margin: 40px 0 24px 0;
+  margin: 20px 0 24px 0;
   font-style: italic;
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 
 .customer-info {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 4px;
 }
 
@@ -648,13 +635,14 @@ button:hover {
 .customer-location {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.875rem;
 }
 
 .customer-location svg {
-  color: var(--accent-green);
+  color: var(--text-green);
   opacity: 0.8;
 }
 
@@ -663,7 +651,7 @@ button:hover {
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-top: 40px;
+  margin-top: 36px;
 }
 
 .carousel-indicators .indicator {
@@ -690,12 +678,12 @@ button:hover {
 /* Testimonials Carousel Responsive Styles */
 /* ============================================ */
 
-/* Tablet (768px - 1024px): 2 cards visible */
+/* Tablet (768px - 1024px): 1 card visible */
 @media screen and (max-width: 1024px) {
   .testimonial-card {
-    flex: 0 0 calc((100% - 20px) / 2);
-    min-width: calc((100% - 20px) / 2);
-    max-width: calc((100% - 20px) / 2);
+    flex: 0 0 100%;
+    min-width: 100%;
+    max-width: 100%;
   }
 
   .testimonials-carousel {
@@ -710,12 +698,12 @@ button:hover {
 /* Mobile (< 768px): 1 card visible */
 @media screen and (max-width: 768px) {
   .customer-testimonials {
-    padding: 60px 0 40px;
+    padding: 54px 0 36px;
   }
 
   .customer-testimonials h2 {
     font-size: 1.75rem;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
     padding: 0 var(--spacing-unit);
   }
 
@@ -732,17 +720,15 @@ button:hover {
 
   .quote-mark {
     font-size: 4rem;
-    top: 12px;
-    left: 16px;
   }
 
   .testimonial-text {
-    margin-top: 32px;
+    margin-top: 16px;
     font-size: 0.9375rem;
   }
 
   .carousel-indicators {
-    margin-top: 28px;
+    margin-top: 25px;
   }
 
   .carousel-indicators .indicator {
@@ -754,12 +740,12 @@ button:hover {
 /* Small mobile (< 480px) */
 @media screen and (max-width: 480px) {
   .customer-testimonials {
-    padding: 50px 0 35px;
+    padding: 45px 0 32px;
   }
 
   .customer-testimonials h2 {
     font-size: 1.5rem;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
 
   .testimonial-card {
@@ -775,8 +761,6 @@ button:hover {
 
   .quote-mark {
     font-size: 3rem;
-    top: 8px;
-    left: 12px;
   }
 
   .testimonial-text {
