@@ -1,0 +1,216 @@
+<section class="customer-testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonials-carousel">
+            <div class="testimonials-wrapper" id="testimonials-wrapper" style="transform: translateX(-400px);">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Rob was easy to work with! He understood exactly what I needed done and completed it as requested. He was a conscientious worker and worked efficiently. I would definitely recommend Rob!</p>
+                    <div class="customer-info">
+                        <h3 class="customer-name">Wendy</h3>
+                        <span class="customer-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Property located on the eastside of Waterloo
+                        </span>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">I want to express my gratitude to Rob for his excellent work trimming and bushwhacking at our home. He was punctual, worked tirelessly and always cleaned up after his cuttings. He listens carefully to your requests and followed through on schedule. Rob is a nice, kind, pleasant guy to have around. You'll be very pleased as we were.”</p>
+                    <div class="customer-info">
+                        <h3 class="customer-name">Gail</h3>
+                        <span class="customer-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Property located just outside Waterloo
+                        </span>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Rob has done an excellent job this year of our lawn care. He is knowledgeable about the various issues that we have had with our shrubs and lawn. He has helped to resolve them the best we are able. He communicates well with us about when and what to expect each week. He is someone I would recommend without reservation. It has been a pleasure to have him do our lawn service this year.</p>
+                    <div class="customer-info">
+                        <h3 class="customer-name">Sharon Martin</h3>
+                        <span class="customer-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Google Review
+                        </span>
+                    </div>
+                </div>
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">We’ve been working with Rob from Loewen Property Works Inc. for our snow clearing, and he’s been excellent! He’s reliable, professional, and very organized, always communicating clearly about schedules and services.
+
+Last winter was especially heavy with snow, and Rob did a fantastic job keeping everything managed smoothly. We really appreciate his attention to detail and how easy he makes the process for us. Highly recommend his services for both fall and winter! Thank you, Rob, for all your help.</p>
+                    <div class="customer-info">
+                        <h3 class="customer-name">Ghadah Hajar</h3>
+                        <span class="customer-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Google Review
+                        </span>
+                    </div>
+                </div>
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">I contacted Rob last year for snow removal in Cambridge. He did good job and most importantly on time. I strongly recommend him.</p>
+                    <div class="customer-info">
+                        <h3 class="customer-name">Paramjit Soor</h3>
+                        <span class="customer-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Property located on the west side of Cambridge
+                        </span>
+                    </div>
+                </div>
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Rob is great! He’s helped me a number of times with everything from yard cleanup, weeding, tree pruning and cutting down and clearing small trees to helping with junk removal and even weatherstripping and drywall repair. His rates are fair and he always shows up when he says he will. He’s my go to guy for property mgmt services. Id gladly recommend him.</p>
+                    <div class="customer-info">
+                        <h3 class="customer-name">Chris C.</h3>
+                        <span class="customer-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Google Review
+                        </span>
+                    </div>
+                </div>
+                <!-- Testimonial 7 -->
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">As I get older it is nice to know that this excellent service is available at affordable pricing. I would rate the quality of work done for me so far above what I expected. The communication from Rob of what and when the work was is being done has also been excellent. I would recommend this service to anyone.
+</p>
+                    <div class="customer-info">
+                        <h3 class="customer-name">Paul Conrad</h3>
+                        <span class="customer-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Google Review
+                        </span>
+                    </div>
+                </div>
+            <div class="testimonial-card" aria-hidden="true">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Rob was easy to work with! He understood exactly what I needed done and completed it as requested. He was a conscientious worker and worked efficiently. I would definitely recommend Rob!</p>
+                    <div class="customer-info">
+                        <h3 class="customer-name">Wendy</h3>
+                        <span class="customer-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Property located on the eastside of Waterloo
+                        </span>
+                    </div>
+                </div><div class="testimonial-card" aria-hidden="true">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">I want to express my gratitude to Rob for his excellent work trimming and bushwhacking at our home. He was punctual, worked tirelessly and always cleaned up after his cuttings. He listens carefully to your requests and followed through on schedule. Rob is a nice, kind, pleasant guy to have around. You'll be very pleased as we were.”</p>
+                    <div class="customer-info">
+                        <h3 class="customer-name">Gail</h3>
+                        <span class="customer-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Property located just outside Waterloo
+                        </span>
+                    </div>
+                </div><div class="testimonial-card" aria-hidden="true">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Rob has done an excellent job this year of our lawn care. He is knowledgeable about the various issues that we have had with our shrubs and lawn. He has helped to resolve them the best we are able. He communicates well with us about when and what to expect each week. He is someone I would recommend without reservation. It has been a pleasure to have him do our lawn service this year.</p>
+                    <div class="customer-info">
+                        <h3 class="customer-name">Sharon Martin</h3>
+                        <span class="customer-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Google Review
+                        </span>
+                    </div>
+                </div><div class="testimonial-card" aria-hidden="true">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">We’ve been working with Rob from Loewen Property Works Inc. for our snow clearing, and he’s been excellent! He’s reliable, professional, and very organized, always communicating clearly about schedules and services.
+
+Last winter was especially heavy with snow, and Rob did a fantastic job keeping everything managed smoothly. We really appreciate his attention to detail and how easy he makes the process for us. Highly recommend his services for both fall and winter! Thank you, Rob, for all your help.</p>
+                    <div class="customer-info">
+                        <h3 class="customer-name">Ghadah Hajar</h3>
+                        <span class="customer-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Google Review
+                        </span>
+                    </div>
+                </div><div class="testimonial-card" aria-hidden="true">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">I contacted Rob last year for snow removal in Cambridge. He did good job and most importantly on time. I strongly recommend him.</p>
+                    <div class="customer-info">
+                        <h3 class="customer-name">Paramjit Soor</h3>
+                        <span class="customer-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Property located on the west side of Cambridge
+                        </span>
+                    </div>
+                </div><div class="testimonial-card" aria-hidden="true">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Rob is great! He’s helped me a number of times with everything from yard cleanup, weeding, tree pruning and cutting down and clearing small trees to helping with junk removal and even weatherstripping and drywall repair. His rates are fair and he always shows up when he says he will. He’s my go to guy for property mgmt services. Id gladly recommend him.</p>
+                    <div class="customer-info">
+                        <h3 class="customer-name">Chris C.</h3>
+                        <span class="customer-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Google Review
+                        </span>
+                    </div>
+                </div><div class="testimonial-card" aria-hidden="true">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">As I get older it is nice to know that this excellent service is available at affordable pricing. I would rate the quality of work done for me so far above what I expected. The communication from Rob of what and when the work was is being done has also been excellent. I would recommend this service to anyone.
+</p>
+                    <div class="customer-info">
+                        <h3 class="customer-name">Paul Conrad</h3>
+                        <span class="customer-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Google Review
+                        </span>
+                    </div>
+                </div></div>
+        </div>
+        <div class="carousel-indicators" id="carousel-indicators">
+            <button class="indicator" data-index="0" aria-label="Go to testimonial group 1"></button>
+            <button class="indicator active" data-index="1" aria-label="Go to testimonial group 2"></button>
+            <button class="indicator" data-index="2" aria-label="Go to testimonial group 3"></button>
+            <button class="indicator" data-index="3" aria-label="Go to testimonial group 4"></button>
+            <button class="indicator" data-index="4" aria-label="Go to testimonial group 5"></button>
+        </div>
+    </section>

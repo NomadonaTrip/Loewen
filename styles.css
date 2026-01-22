@@ -18,7 +18,8 @@ body {
   --primary-dark: #000000;
   --secondary-dark: #32373c;
   --text-light: #ffffff;
-  --text-cream: #f5f5f5;
+  --text-cream: #f5ecd5;
+  --text-green: #578e7e;
   --accent-green: #183d3d;
   --spacing-unit: 24px;
   /* Font families */
@@ -308,7 +309,7 @@ ul button:hover {
   border-radius: 0;
 }
 h1 {
-  font-family: inherit;
+  font-family: var(--font-heading);
   font-weight: 700;
   color: var(--text-light);
   font-size: 42px;
@@ -316,7 +317,7 @@ h1 {
   margin: 0 0 var(--spacing-unit) 0;
 }
 h2 {
-  font-family: inherit;
+  font-family: var(--font-heading);
   font-weight: 600;
   color: var(--text-light);
   font-size: 36px;
@@ -366,7 +367,7 @@ p {
   max-width: 350px;
   min-height: 200px;
   text-align: center;
-  background-color: var(--text-light);
+  background-color: var(--text-cream);
   padding: var(--spacing-unit);
   font-weight: 400;
   box-sizing: border-box;
@@ -376,6 +377,7 @@ p {
 .request h3 {
   text-transform: uppercase;
   color: var(--secondary-dark);
+  font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 16px;
@@ -383,7 +385,8 @@ p {
 .Professional p,
 .Trustworthy p,
 .request p {
-  color: var(--secondary-dark);
+  color: var(--text-green);
+  font-family: var(--font-heading);
   font-size: 14px;
   line-height: 1.6;
 }
@@ -549,6 +552,7 @@ button:hover {
   padding: 80px 0 60px;
   overflow: hidden;
   position: relative;
+  flex-shrink: 0;
 }
 
 .customer-testimonials h2 {
@@ -568,7 +572,6 @@ button:hover {
   overflow: hidden;
 }
 
-
 .testimonials-wrapper {
   display: flex;
   gap: 20px;
@@ -584,19 +587,27 @@ button:hover {
   flex: 0 0 calc((100% - 40px) / 3);
   min-width: calc((100% - 40px) / 3);
   max-width: calc((100% - 40px) / 3);
-  background: linear-gradient(145deg, rgba(50, 55, 60, 0.9), rgba(30, 33, 36, 0.95));
+  background: linear-gradient(
+    145deg,
+    rgba(50, 55, 60, 0.9),
+    rgba(30, 33, 36, 0.95)
+  );
   border-radius: 16px;
   padding: 28px;
   position: relative;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-sizing: border-box;
 }
 
 .testimonial-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(24, 61, 61, 0.2);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(24, 61, 61, 0.2);
 }
 
 .quote-mark {
