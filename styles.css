@@ -510,6 +510,7 @@ p {
   min-height: 320px;
   position: relative;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .key-service-card::before {
