@@ -1,661 +1,1020 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Favicon links -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/images/icons/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/images/logo/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/images/icons/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/images/icons/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="LPW" />
+    <link rel="manifest" href="/assets/images/icons/site.webmanifest" />
+    <!-- site external css styling  -->
+    <link rel="stylesheet" href="styles.css" />
     <title>Loewen Property Works</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="navbar">
-        <div class="logo">
-            <img src="images/logo/Logo_white.png" alt="Loewen Property Works">
-            <p>Loewen Property Works Inc.</p>
-        </div>
-        <a href="tel:+15195882264" class="mobile-call-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-            <span>Call Now</span>
-        </a>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="nav-links" id="nav-links">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="services.html" >Our Services</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
-                <li><a href="tel:+15195882264"><button>Call now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-outbound" viewBox="0 0 16 16">
-  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5"/>
-</svg></button></a></li>
-            </ul>
-        </div>
+      <div class="logo">
+        <img src="images/logo/Logo_white.png" alt="Loewen Property Works" />
+        <p>Loewen Property Works Inc.</p>
+      </div>
+      <a href="tel:+15195882264" class="mobile-call-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+          />
+        </svg>
+        <span>Call Now</span>
+      </a>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          <li>
+            <a href="tel:+15195882264"
+              ><button>
+                Call now
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-telephone-outbound"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5"
+                  />
+                </svg></button
+            ></a>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="hero">
-        <div class="hero-image">
-            <div class="slide active">
-                <img src="images/hero_banner/leaf removal_before.jpg" alt="Before Leaf removal">
-            </div>
-            <div class="slide">
-                <img src="images/hero_banner/Leaf_removal_after.jpg" alt="After leaf removal">
-            </div>
-            <div class="slide">
-                <img src="images/hero_banner/brush_cutting_before.jpg" alt="Before Brush cutting">
-            </div>
-            <div class="slide">
-                <img src="images/hero_banner/brush_cutting_after.jpg" alt="After brush cutting">
-            </div>
-            <div class="slide">
-                <img src="images/hero_banner/Beds_before.jpg" alt="Before shrub bed preparation">
-            </div>
-            <div class="slide">
-                <img src="images/hero_banner/Beds_after.jpg" alt="After Shrub bed preparation">
-            </div>
-            <div class="slide">
-                <img src="images/hero_banner/Sodding_before.jpg" alt="Before Sodding">
-            </div>
-            <div class="slide">
-                <img src="images/hero_banner/Sodding_after.jpg" alt="After Sodding">
-            </div>
-            <div class="slide">
-                <img src="images/hero_banner/grass_cutting_before.jpg" alt="Before Grass cutting">
-            </div>
-            <div class="slide">
-                <img src="images/hero_banner/grass_cutting_after.jpg" alt="After grass cutting">
-            </div>
-            <div class="slide">
-                <img src="images/hero_banner/yard_cleanup_before.jpg" alt="Before yard cleanup">
-            </div>
-            <div class="slide">
-                <img src="images/hero_banner/Yard_cleanup_after.jpg" alt="After yard cleanup">
-            </div>
-            <div class="slide">
-                <img src="images/hero_banner/tree cutting_before.jpg" alt="Before Tree cutting">
-            </div>
-            <div class="slide">
-                <img src="images/hero_banner/tree cutting_after.jpg" alt="After tree cutting">
-            </div>
-            <div class="slide">
-                <img src="images/hero_banner/Pruning_before.jpg" alt="Before Pruning">
-            </div>
-            <div class="slide">
-                <img src="images/hero_banner/Pruning_after.jpg" alt="After Pruning">
-            </div>
+      <div class="hero-image">
+        <div class="slide active">
+          <img
+            src="images/hero_banner/leaf removal_before.jpg"
+            alt="Before Leaf removal"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/hero_banner/Leaf_removal_after.jpg"
+            alt="After leaf removal"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/hero_banner/brush_cutting_before.jpg"
+            alt="Before Brush cutting"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/hero_banner/brush_cutting_after.jpg"
+            alt="After brush cutting"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/hero_banner/Beds_before.jpg"
+            alt="Before shrub bed preparation"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/hero_banner/Beds_after.jpg"
+            alt="After Shrub bed preparation"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/hero_banner/Sodding_before.jpg"
+            alt="Before Sodding"
+          />
+        </div>
+        <div class="slide">
+          <img src="images/hero_banner/Sodding_after.jpg" alt="After Sodding" />
+        </div>
+        <div class="slide">
+          <img
+            src="images/hero_banner/grass_cutting_before.jpg"
+            alt="Before Grass cutting"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/hero_banner/grass_cutting_after.jpg"
+            alt="After grass cutting"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/hero_banner/yard_cleanup_before.jpg"
+            alt="Before yard cleanup"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/hero_banner/Yard_cleanup_after.jpg"
+            alt="After yard cleanup"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/hero_banner/tree cutting_before.jpg"
+            alt="Before Tree cutting"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/hero_banner/tree cutting_after.jpg"
+            alt="After tree cutting"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/hero_banner/Pruning_before.jpg"
+            alt="Before Pruning"
+          />
+        </div>
+        <div class="slide">
+          <img src="images/hero_banner/Pruning_after.jpg" alt="After Pruning" />
+        </div>
         <div class="hero-text">
-            <h1>Green. Clean. Done.</h1>
-            <p>Personalized landscaping - we go the extra yard</p>
-            <a href="contact-us.html">
-                <button>Contact Us</button>
-            </a>
-        </div>  
-    </div>
+          <h1>Green. Clean. Done.</h1>
+          <p>Personalized landscaping - we go the extra yard</p>
+          <a href="contact-us.html">
+            <button>Contact Us</button>
+          </a>
+        </div>
+      </div>
     </div>
 
     <!-- Customer Testimonials Carousel -->
     <section class="customer-testimonials">
-        <h2>What Our Customers Say</h2>
-        <div class="testimonials-carousel">
-            <div class="testimonials-wrapper" id="testimonials-wrapper">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <div class="quote-mark">"</div>
-                    <p class="testimonial-text">Rob was easy to work with! He understood exactly what I needed done and completed it as requested. He was a conscientious worker and worked efficiently. I would definitely recommend Rob!</p>
-                    <div class="customer-info">
-                        <h3 class="customer-name">Wendy</h3>
-                        <span class="customer-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            Property located on the eastside of Waterloo
-                        </span>
-                    </div>
-                </div>
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                    <div class="quote-mark">"</div>
-                    <p class="testimonial-text">I want to express my gratitude to Rob for his excellent work trimming and bushwhacking at our home. He was punctual, worked tirelessly and always cleaned up after his cuttings. He listens carefully to your requests and followed through on schedule. Rob is a nice, kind, pleasant guy to have around. You'll be very pleased as we were.”</p>
-                    <div class="customer-info">
-                        <h3 class="customer-name">Gail</h3>
-                        <span class="customer-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            Property located just outside Waterloo
-                        </span>
-                    </div>
-                </div>
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card">
-                    <div class="quote-mark">"</div>
-                    <p class="testimonial-text">Rob has done an excellent job this year of our lawn care. He is knowledgeable about the various issues that we have had with our shrubs and lawn. He has helped to resolve them the best we are able. He communicates well with us about when and what to expect each week. He is someone I would recommend without reservation. It has been a pleasure to have him do our lawn service this year.</p>
-                    <div class="customer-info">
-                        <h3 class="customer-name">Sharon Martin</h3>
-                        <span class="customer-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            Google Review
-                        </span>
-                    </div>
-                </div>
-                <!-- Testimonial 4 -->
-                <div class="testimonial-card">
-                    <div class="quote-mark">"</div>
-                    <p class="testimonial-text">We’ve been working with Rob from Loewen Property Works Inc. for our snow clearing, and he’s been excellent! He’s reliable, professional, and very organized, always communicating clearly about schedules and services.
-
-Last winter was especially heavy with snow, and Rob did a fantastic job keeping everything managed smoothly. We really appreciate his attention to detail and how easy he makes the process for us. Highly recommend his services for both fall and winter! Thank you, Rob, for all your help.</p>
-                    <div class="customer-info">
-                        <h3 class="customer-name">Ghadah Hajar</h3>
-                        <span class="customer-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            Google Review
-                        </span>
-                    </div>
-                </div>
-                <!-- Testimonial 5 -->
-                <div class="testimonial-card">
-                    <div class="quote-mark">"</div>
-                    <p class="testimonial-text">I contacted Rob last year for snow removal in Cambridge. He did good job and most importantly on time. I strongly recommend him.</p>
-                    <div class="customer-info">
-                        <h3 class="customer-name">Paramjit Soor</h3>
-                        <span class="customer-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            Property located on the west side of Cambridge
-                        </span>
-                    </div>
-                </div>
-                <!-- Testimonial 6 -->
-                <div class="testimonial-card">
-                    <div class="quote-mark">"</div>
-                    <p class="testimonial-text">Rob is great! He’s helped me a number of times with everything from yard cleanup, weeding, tree pruning and cutting down and clearing small trees to helping with junk removal and even weatherstripping and drywall repair. His rates are fair and he always shows up when he says he will. He’s my go to guy for property mgmt services. Id gladly recommend him.</p>
-                    <div class="customer-info">
-                        <h3 class="customer-name">Chris C.</h3>
-                        <span class="customer-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            Google Review
-                        </span>
-                    </div>
-                </div>
-                <!-- Testimonial 7 -->
-                <div class="testimonial-card">
-                    <div class="quote-mark">"</div>
-                    <p class="testimonial-text">As I get older it is nice to know that this excellent service is available at affordable pricing. I would rate the quality of work done for me so far above what I expected. The communication from Rob of what and when the work was is being done has also been excellent. I would recommend this service to anyone.
-</p>
-                    <div class="customer-info">
-                        <h3 class="customer-name">Paul Conrad</h3>
-                        <span class="customer-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            Google Review
-                        </span>
-                    </div>
-                </div>
+      <h2>What Our Customers Say</h2>
+      <div class="testimonials-carousel">
+        <div class="testimonials-wrapper" id="testimonials-wrapper">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">
+              Rob was easy to work with! He understood exactly what I needed
+              done and completed it as requested. He was a conscientious worker
+              and worked efficiently. I would definitely recommend Rob!
+            </p>
+            <div class="customer-info">
+              <h3 class="customer-name">Wendy</h3>
+              <span class="customer-location">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Property located on the eastside of Waterloo
+              </span>
             </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">
+              I want to express my gratitude to Rob for his excellent work
+              trimming and bushwhacking at our home. He was punctual, worked
+              tirelessly and always cleaned up after his cuttings. He listens
+              carefully to your requests and followed through on schedule. Rob
+              is a nice, kind, pleasant guy to have around. You'll be very
+              pleased as we were.”
+            </p>
+            <div class="customer-info">
+              <h3 class="customer-name">Gail</h3>
+              <span class="customer-location">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Property located just outside Waterloo
+              </span>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">
+              Rob has done an excellent job this year of our lawn care. He is
+              knowledgeable about the various issues that we have had with our
+              shrubs and lawn. He has helped to resolve them the best we are
+              able. He communicates well with us about when and what to expect
+              each week. He is someone I would recommend without reservation. It
+              has been a pleasure to have him do our lawn service this year.
+            </p>
+            <div class="customer-info">
+              <h3 class="customer-name">Sharon Martin</h3>
+              <span class="customer-location">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Google Review
+              </span>
+            </div>
+          </div>
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">
+              We’ve been working with Rob from Loewen Property Works Inc. for
+              our snow clearing, and he’s been excellent! He’s reliable,
+              professional, and very organized, always communicating clearly
+              about schedules and services. Last winter was especially heavy
+              with snow, and Rob did a fantastic job keeping everything managed
+              smoothly. We really appreciate his attention to detail and how
+              easy he makes the process for us. Highly recommend his services
+              for both fall and winter! Thank you, Rob, for all your help.
+            </p>
+            <div class="customer-info">
+              <h3 class="customer-name">Ghadah Hajar</h3>
+              <span class="customer-location">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Google Review
+              </span>
+            </div>
+          </div>
+          <!-- Testimonial 5 -->
+          <div class="testimonial-card">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">
+              I contacted Rob last year for snow removal in Cambridge. He did
+              good job and most importantly on time. I strongly recommend him.
+            </p>
+            <div class="customer-info">
+              <h3 class="customer-name">Paramjit Soor</h3>
+              <span class="customer-location">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Property located on the west side of Cambridge
+              </span>
+            </div>
+          </div>
+          <!-- Testimonial 6 -->
+          <div class="testimonial-card">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">
+              Rob is great! He’s helped me a number of times with everything
+              from yard cleanup, weeding, tree pruning and cutting down and
+              clearing small trees to helping with junk removal and even
+              weatherstripping and drywall repair. His rates are fair and he
+              always shows up when he says he will. He’s my go to guy for
+              property mgmt services. Id gladly recommend him.
+            </p>
+            <div class="customer-info">
+              <h3 class="customer-name">Chris C.</h3>
+              <span class="customer-location">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Google Review
+              </span>
+            </div>
+          </div>
+          <!-- Testimonial 7 -->
+          <div class="testimonial-card">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">
+              As I get older it is nice to know that this excellent service is
+              available at affordable pricing. I would rate the quality of work
+              done for me so far above what I expected. The communication from
+              Rob of what and when the work was is being done has also been
+              excellent. I would recommend this service to anyone.
+            </p>
+            <div class="customer-info">
+              <h3 class="customer-name">Paul Conrad</h3>
+              <span class="customer-location">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Google Review
+              </span>
+            </div>
+          </div>
         </div>
-        <div class="carousel-indicators" id="carousel-indicators">
-            <button class="indicator active" data-index="0" aria-label="Go to testimonial 1"></button>
-            <button class="indicator" data-index="1" aria-label="Go to testimonial 2"></button>
-            <button class="indicator" data-index="2" aria-label="Go to testimonial 3"></button>
-            <button class="indicator" data-index="3" aria-label="Go to testimonial 4"></button>
-            <button class="indicator" data-index="4" aria-label="Go to testimonial 5"></button>
-            <button class="indicator" data-index="5" aria-label="Go to testimonial 6"></button>
-            <button class="indicator" data-index="6" aria-label="Go to testimonial 7"></button>
-        </div>
+      </div>
+      <div class="carousel-indicators" id="carousel-indicators">
+        <button
+          class="indicator active"
+          data-index="0"
+          aria-label="Go to testimonial 1"
+        ></button>
+        <button
+          class="indicator"
+          data-index="1"
+          aria-label="Go to testimonial 2"
+        ></button>
+        <button
+          class="indicator"
+          data-index="2"
+          aria-label="Go to testimonial 3"
+        ></button>
+        <button
+          class="indicator"
+          data-index="3"
+          aria-label="Go to testimonial 4"
+        ></button>
+        <button
+          class="indicator"
+          data-index="4"
+          aria-label="Go to testimonial 5"
+        ></button>
+        <button
+          class="indicator"
+          data-index="5"
+          aria-label="Go to testimonial 6"
+        ></button>
+        <button
+          class="indicator"
+          data-index="6"
+          aria-label="Go to testimonial 7"
+        ></button>
+      </div>
     </section>
 
-
     <div class="why-us">
-        <div><h2>Why They Choose Us</h2></div>
-        <div class="reasons">
-            <div class="Professional">
-                <h3>Professional Service</h3>
-                <p>We will arrive promptly at the scheduled time and will work efficiently with the goal of finishing the work within the estimated time frame.</p>
-            </div>
-            <div class="Trustworthy">
-                <h3>Trustworthy and reliable</h3>
-                <p>We will show up on schedule, will minimize disruptions, and when done will leave our work area, whether in your yard or in your home, neat and clean.</p>
-            </div>
-            <div class="request">
-                <h3>request an estimate</h3>
-                <p>Fill out our estimate form and we’ll get back to you ASAP! Or just call us at (519) 588-2264 or email us at robl@loewenpropertyworks.ca</p>
-            </div>
+      <div><h2>Why They Choose Us</h2></div>
+      <div class="reasons">
+        <div class="Professional">
+          <h3>Professional Service</h3>
+          <p>
+            We will arrive promptly at the scheduled time and will work
+            efficiently with the goal of finishing the work within the estimated
+            time frame.
+          </p>
+        </div>
+        <div class="Trustworthy">
+          <h3>Trustworthy and reliable</h3>
+          <p>
+            We will show up on schedule, will minimize disruptions, and when
+            done will leave our work area, whether in your yard or in your home,
+            neat and clean.
+          </p>
+        </div>
+        <div class="request">
+          <h3>request an estimate</h3>
+          <p>
+            Fill out our estimate form and we'll get back to you ASAP! Or just
+            call us at (519) 588-2264 or email us at robl@loewenpropertyworks.ca
+          </p>
+        </div>
+      </div>
     </div>
+
+    <!-- Key Services Section -->
+    <section class="key-services">
+      <div class="key-services-header">
+        <h2>Key Services</h2>
+        <p class="section-subtitle">
+          Professional landscaping solutions for your property
+        </p>
+      </div>
+      <div class="key-services-grid">
+        <!-- Row 1 -->
+        <div class="key-service-card">
+          <a href="services.html#brush-clearing-section">
+            <img
+              src="images/icons/1x/Brush_clearing_white.png"
+              alt="Brush Clearing"
+            />
+          </a>
+          <h3>Brush Clearing</h3>
+          <p>
+            Do you have unwanted brush? We can remove it. Is it the DENSE THORNY
+            stuff? We love it!
+          </p>
+          <a href="services.html#brush-clearing-section" class="learn-more-link"
+            >Learn more</a
+          >
+        </div>
+        <div class="key-service-card">
+          <a href="services.html#tree-cutting-section">
+            <img
+              src="images/icons/1x/tree cuttingAsset 3_1.png"
+              alt="Tree Cutting"
+            />
+          </a>
+          <h3>Tree Cutting</h3>
+          <p>
+            Anything that can be reached from the ground- small trees, lower
+            limbs (up to about 10' up), larger trees if can fall safely
+          </p>
+          <a href="services.html#tree-cutting-section" class="learn-more-link"
+            >Learn more</a
+          >
+        </div>
+        <div class="key-service-card">
+          <a href="services.html#pruning-section">
+            <img src="images/icons/1x/PruningAsset 4_1.png" alt="Pruning" />
+          </a>
+          <h3>Pruning</h3>
+          <p>
+            Removing deadwood and unwanted branches (to about 10-12' up);
+            shaping bushes and small trees
+          </p>
+          <a href="services.html#pruning-section" class="learn-more-link"
+            >Learn more</a
+          >
+        </div>
+        <div class="key-service-card">
+          <a href="services.html#sodding-seeding-section">
+            <img
+              src="images/icons/1x/soddingAsset 6_1.png"
+              alt="Sodding/Seeding"
+            />
+          </a>
+          <h3>Sodding / Seeding</h3>
+          <p>
+            Professionally preparing ground; expertly laying sod or spreading
+            grass seed.
+          </p>
+          <a
+            href="services.html#sodding-seeding-section"
+            class="learn-more-link"
+            >Learn more</a
+          >
+        </div>
+        <!-- Row 2 -->
+        <div class="key-service-card">
+          <a href="services.html#flower-shrubs-section">
+            <img
+              src="images/icons/1x/Flower bedAsset 7_1.png"
+              alt="Flower/Shrub Beds"
+            />
+          </a>
+          <h3>Flower / Shrub Beds</h3>
+          <p>
+            Design, construct, maintenance, re-edging; specializing in WEED
+            REMOVAL
+          </p>
+          <a href="services.html#flower-shrubs-section" class="learn-more-link"
+            >Learn more</a
+          >
+        </div>
+        <div class="key-service-card">
+          <a href="services.html#grass-cutting-section">
+            <img
+              src="images/icons/1x/Lawn mowerAsset 2_1.png"
+              alt="Grass Cutting"
+            />
+          </a>
+          <h3>Grass Cutting</h3>
+          <p>Including TALL (3 - 4 feet) grass</p>
+          <a href="services.html#grass-cutting-section" class="learn-more-link"
+            >Learn more</a
+          >
+        </div>
+        <div class="key-service-card">
+          <a href="services.html#leaf-cleanup-section">
+            <img
+              src="images/icons/1x/Leaf CleanupAsset 8_1.png"
+              alt="Leaf Cleanup"
+            />
+          </a>
+          <h3>Leaf Cleanup</h3>
+          <p>
+            Raking and bagging (yard waste bags), with the option of hauling
+            away if there's a large amount
+          </p>
+          <a href="services.html#leaf-cleanup-section" class="learn-more-link"
+            >Learn more</a
+          >
+        </div>
+        <div class="key-service-card">
+          <a href="services.html#yard-cleanup-section">
+            <img
+              src="images/icons/1x/Yard CleanupAsset 10_1.png"
+              alt="General Yard Cleanup"
+            />
+          </a>
+          <h3>General Yard Cleanup</h3>
+          <p>
+            Combining several of the previous services for complete yard
+            transformation
+          </p>
+          <a href="services.html#yard-cleanup-section" class="learn-more-link"
+            >Learn more</a
+          >
+        </div>
+      </div>
+      <div class="key-services-cta">
+        <a href="services.html">
+          <button type="button">View All Services</button>
+        </a>
+      </div>
+    </section>
+
     <div class="can-do">
-        <h2>What We Can Do For You</h2>
-        <h3>Your complete outdoor solution, from the ground up.</h3>
+      <h2>Additional Services</h2>
+      <h3>Beyond landscaping, we handle it all.</h3>
     </div>
     <div class="services">
-        <div class="service-groups">
-            <div class="service-offering">
-                <a href="services.html#brush-clearing-section">
-                    <img src="images/icons/1x/Brush_clearing_white.png"/>
-                </a>
-                <h3>Brush Clearing</h3>
-                <p>Do you have unwanted brush? We can remove it. Is it the DENSE THORNY stuff? We love it!</p>
-                <a href="services.html#brush-clearing-section">Learn more</a>
-            </div>
-            <div class="service-offering">
-                <a href="services.html#tree-cutting-section"><img src="images/icons/1x/tree cuttingAsset 3_1.png"/></a>
-                <h3>Tree Cutting</h3>
-                <p>Anything that can be reached from the ground- small trees, lower limbs 
-                    (up to about 10' up), larger trees if can fall safely, cutting up already felled trees</p>
-                <a href="services.html#tree-cutting-section">Learn more</a>
-            </div>
-            <div class="service-offering">
-                <a href="services.html#demolition-section">
-                    <img src="images/icons/1x/demolitionAsset 5_1.png"/>
-                </a>
-                <h3>Demolition</h3>
-                <p>Outdoors- smaller outdoor structures such as decks and sheds; Indoors- just about anything required for renovations, includes wallpaper removal, carpet removal, hard flooring removal, drywall removal, basement stud removal​</p>
-                <a href="services.html#demolition-section">Learn more</a>
-            </div>
-            <div class="service-offering">
-                <a href="services.html#pruning-section">
-                    <img src="images/icons/1x/PruningAsset 4_1.png"/>
-                </a>
-                <h3>Pruning</h3>
-                <p>Removing deadwood and unwanted branches (to about 10-12' up); shaping bushes and small trees</p>
-                <a href="services.html#pruning-section">Learn more</a>
-            </div>
+      <div class="service-groups">
+        <div class="service-offering">
+          <a href="services.html#demolition-section">
+            <img src="images/icons/1x/demolitionAsset 5_1.png" />
+          </a>
+          <h3>Demolition</h3>
+          <p>
+            Outdoors- smaller outdoor structures such as decks and sheds;
+            Indoors- just about anything required for renovations, includes
+            wallpaper removal, carpet removal, hard flooring removal, drywall
+            removal, basement stud removal
+          </p>
+          <a href="services.html#demolition-section">Learn more</a>
         </div>
-        <!-- End of service group 1 -->
-        <div class="service-groups">
-            <div class="service-offering">
-                <a href="services.html#sodding-seeding-section">
-                    <img src="images/icons/1x/soddingAsset 6_1.png"/>
-                </a>
-                <h3>Sodding/ Seeding</h3>
-                <p>Professionally preparing ground; expertly laying sod or spreading grass seed.</p>
-                <a href="services.html#sodding-seeding-section">Learn more</a>
-            </div>
-            <div class="service-offering">
-                <a href="services.html#flower-shrubs-section">
-                    <img src="images/icons/1x/Flower bedAsset 7_1.png"/>
-                </a>
-                <h3>Flower/ Shrubs Beds</h3>
-                <p>Design, construct, maintenance, re-edging; specializing in WEED REMOVAL </p>
-                <a href="services.html#flower-shrubs-section">Learn more</a>
-            </div>
-            <div class="service-offering">
-                <a href="services.html#grass-cutting-section">
-                    <img src="images/icons/1x/Lawn mowerAsset 2_1.png"/>
-                </a>
-                <h3>Grass Cutting</h3>
-                <p>Including TALL (3 - 4 feet) grass</p>
-                <a href="services.html#grass-cutting-section">Learn more</a>
-            </div>
-            <div class="service-offering">
-                <a href="services.html#leaf-cleanup-section">
-                    <img src="images/icons/1x/Leaf CleanupAsset 8_1.png"/>
-                </a>
-                <h3>Leaf Cleanup</h3>
-                <p>Raking and bagging (yard waste bags), with the option of hauling away if there's a large amount</p>
-                <a href="services.html#leaf-cleanup-section">Learn more</a>
-            </div>
+        <div class="service-offering">
+          <a href="services.html#junk-sorting-section">
+            <img src="images/icons/1x/Junk sortingAsset 9_1.png" />
+          </a>
+          <h3>Junk Sorting / Recycling / Disposal</h3>
+          <p>Outdoor and indoor</p>
+          <a href="services.html#junk-sorting-section">Learn more</a>
         </div>
-        <!-- End of service group 2 -->
-        <div class="service-groups">                
-            <div class="service-offering">
-                <a href="services.html#junk-sorting-section">
-                    <img src="images/icons/1x/Junk sortingAsset 9_1.png"/>
-                </a>
-                <h3>Junk Sorting/ recycling/ Disposal</h3>
-                <p>Outdoor and indoor</p>
-                <a href="services.html#junk-sorting-section">Learn more</a>
-            </div>
-            <div class="service-offering">
-                <a href="services.html#yard-cleanup-section">
-                    <img src="images/icons/1x/Yard CleanupAsset 10_1.png"/>
-                </a>
-                <h3>General Yard Cleanup</h3>
-                <p>Combining several of the previous</p>
-                <a href="services.html#yard-cleanup-section">Learn more</a>
-            </div>
-            <div class="service-offering">
-                <a href="services.html#painting-section">
-                    <img src="images/icons/1x/PaintingAsset 11_1.png"/>
-                </a>
-                <h3>Painting</h3>
-                <p>Outside walls & structures; Inside surfaces (walls, trim, ceilings)</p>
-                <a href="services.html#painting-section">Learn more</a>
-            </div>
-            <div class="service-offering">
-                <a href="services.html#snow-clearing-section">
-                    <img src="images/icons/1x/Snow ClearingAsset 12.png"/>
-                </a>
-                <h3>Snow Clearing</h3>
-                <p>Sidewalks, driveways and small parking lots</p>
-                <a href="services.html#snow-clearing-section">Learn more</a>
-            </div>
+        <div class="service-offering">
+          <a href="services.html#painting-section">
+            <img src="images/icons/1x/PaintingAsset 11_1.png" />
+          </a>
+          <h3>Painting</h3>
+          <p>
+            Outside walls & structures; Inside surfaces (walls, trim, ceilings)
+          </p>
+          <a href="services.html#painting-section">Learn more</a>
         </div>
-        <!-- End of service group 3 -->
-        <div class="service-groups">
-            <div class="service-offering">
-                <a href="services.html#hydro-digs-section">
-                    <img src="images/icons/1x/Hydro connection digAsset 1_white.png"/>
-                </a>
-                <h3>Hydro Connection Location Digs</h3>
-                <p>Digging to find where buried cables going to the house join to 
-                    the main utility supply lines - these must be hand dug</p>
-                <a href="services.html#hydro-digs-section">Learn more</a>
-            </div>
-            <div class="service-offering">
-                <a href="services.html#hardwood-flooring-section">
-                    <img src="images/icons/1x/Hardwood floorAsset_white.png"/>
-                </a>
-                <h3>Hardwood Floor refinishing</h3>
-                <p>Includes sanding old floor and application of polyurethane</p>
-                <a href="services.html#hardwood-flooring-section">Learn more</a>
-            </div>
-            <div class="service-offering">
-                <a href="services.html#cleaning-section">
-                    <img src="images/icons/1x/Cleaning icon_white.png"/>
-                </a>
-                <h3>Cleaning</h3>
-                <p>Especially particularly dirty situations</p>
-                <a href="services.html#cleaning-section">Learn more</a>
-            </div>
-            <div class="service-offering">
-                <a href="services.html#handyman-repairs-section">
-                    <img src="images/icons/Handyman icon_white.png"/>
-                </a>
-                <h3>Other Handyman repairs</h3>
-                <p>ust ask to see if we can do what you have in mind</p>
-                <a href="services.html#handyman-repairs-section">Learn more</a>
-            </div>
-            
+        <div class="service-offering">
+          <a href="services.html#snow-clearing-section">
+            <img src="images/icons/1x/Snow ClearingAsset 12.png" />
+          </a>
+          <h3>Snow Clearing</h3>
+          <p>Sidewalks, driveways and small parking lots</p>
+          <a href="services.html#snow-clearing-section">Learn more</a>
         </div>
+      </div>
+      <!-- End of service group 1 -->
+      <div class="service-groups">
+        <div class="service-offering">
+          <a href="services.html#hydro-digs-section">
+            <img src="images/icons/1x/Hydro connection digAsset 1_white.png" />
+          </a>
+          <h3>Hydro Connection Location Digs</h3>
+          <p>
+            Digging to find where buried cables going to the house join to the
+            main utility supply lines - these must be hand dug
+          </p>
+          <a href="services.html#hydro-digs-section">Learn more</a>
+        </div>
+        <div class="service-offering">
+          <a href="services.html#hardwood-flooring-section">
+            <img src="images/icons/1x/Hardwood floorAsset_white.png" />
+          </a>
+          <h3>Hardwood Floor Refinishing</h3>
+          <p>Includes sanding old floor and application of polyurethane</p>
+          <a href="services.html#hardwood-flooring-section">Learn more</a>
+        </div>
+        <div class="service-offering">
+          <a href="services.html#cleaning-section">
+            <img src="images/icons/1x/Cleaning icon_white.png" />
+          </a>
+          <h3>Cleaning</h3>
+          <p>Especially particularly dirty situations</p>
+          <a href="services.html#cleaning-section">Learn more</a>
+        </div>
+        <div class="service-offering">
+          <a href="services.html#handyman-repairs-section">
+            <img src="images/icons/Handyman icon_white.png" />
+          </a>
+          <h3>Other Handyman Repairs</h3>
+          <p>Just ask to see if we can do what you have in mind</p>
+          <a href="services.html#handyman-repairs-section">Learn more</a>
+        </div>
+      </div>
+      <!-- End of service group 2 -->
     </div>
-        <!-- End of service group 4 -->
-        <!-- Learn More Service button below -->
-        <div class="service-button">
-            <a href="services.html">
-                <button type="button"><span>Learn more</span></button>
-            </a>
+    <!-- Learn More Service button below -->
+    <div class="service-button">
+      <a href="services.html">
+        <button type="button"><span>Learn more</span></button>
+      </a>
+    </div>
+    <div class="testimonials">
+      <h2>Hear from our customers</h2>
+      <div class="testimonial-comments">
+        <div class="comment">
+          <p>
+            "Rob was easy to work with! He understood exactly what I needed done
+            and completed it as requested. He was a conscientious worker and
+            worked efficiently. I would definitely recommend Rob!"
+          </p>
+          <h2>Wendy</h2>
+          <h4>Property located in eastside of Waterloo</h4>
         </div>
-        <div class="testimonials">
-            <h2>Hear from our customers</h2>
-            <div class="testimonial-comments">        
-                <div class="comment">
-                    <p>"Rob was easy to work with! He understood exactly what I needed done and completed it as 
-                        requested. He was a conscientious worker and worked efficiently. I would definitely 
-                        recommend Rob!" </p>
-                    <h2>Wendy</h2>
-                    <h4>Property located in eastside of Waterloo</h4>
-                </div>
-                <div class="comment">
-                    <p>I want to express my gratitude to Rob for his excellent work trimming and bushwhacking at our home. He was punctual, 
-                        worked tirelessly and always cleaned up after his cuttings. He listens carefully to your requests and followed through on schedule. 
-                        Rob is a nice, kind, pleasant guy to have around. You'll be very pleased as we were. .” </p>
-                    <h2>Gail</h2>
-                    <h4>Property located just outside Waterloo</h4>
-                </div>
-                <div class="comment">
-                    <p>“I contacted Rob last year for snow removal in Cambridge. 
-                        He did good job and most importantly on time. I strongly recommend him.” </p>
-                    <h2>Paramjit Soor</h2>
-                    <h4>Property located in west side of Cambridge</h4>
-                </div>
-            </div>
+        <div class="comment">
+          <p>
+            I want to express my gratitude to Rob for his excellent work
+            trimming and bushwhacking at our home. He was punctual, worked
+            tirelessly and always cleaned up after his cuttings. He listens
+            carefully to your requests and followed through on schedule. Rob is
+            a nice, kind, pleasant guy to have around. You'll be very pleased as
+            we were. .”
+          </p>
+          <h2>Gail</h2>
+          <h4>Property located just outside Waterloo</h4>
         </div>
-
-        <!--============ The footer=========== -->
-        <!-- ================================= -->
-    <div class="footer">    
-        
-        <div class="footer-top">
-            <div class="social-icons">
-                <a href="https://www.facebook.com/loewenpropertyworks" class="fa fa-facebook"></a>           
-                <a href="https://www.linkedin.com/in/robloewen/" class="fa fa-linkedin"></a>
-            </div>
-            <div class="footer-text">
-                <p>Phone: +15195882264</p>
-                <p>Email: robl@loewenpropertyworks.ca</p>
-            </div>
-            <div id="back-to-top">
-                <a href="#top">BACK TO TOP</a>
-            </div>
+        <div class="comment">
+          <p>
+            “I contacted Rob last year for snow removal in Cambridge. He did
+            good job and most importantly on time. I strongly recommend him.”
+          </p>
+          <h2>Paramjit Soor</h2>
+          <h4>Property located in west side of Cambridge</h4>
         </div>
-        <hr>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Loewen Property Works Inc. All rights reserved.</p>
-            <p id="orban-forest">Design by Orban Forest Inc.</p>
-        </div>
+      </div>
     </div>
 
+    <!--============ The footer=========== -->
+    <!-- ================================= -->
+    <div class="footer">
+      <div class="footer-top">
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com/loewenpropertyworks"
+            class="fa fa-facebook"
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/robloewen/"
+            class="fa fa-linkedin"
+          ></a>
+        </div>
+        <div class="footer-text">
+          <p>Phone: +15195882264</p>
+          <p>Email: robl@loewenpropertyworks.ca</p>
+        </div>
+        <div id="back-to-top">
+          <a href="#top">BACK TO TOP</a>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-bottom">
+        <p>&copy; 2025 Loewen Property Works Inc. All rights reserved.</p>
+        <p id="orban-forest">Design by Orban Forest Inc.</p>
+      </div>
+    </div>
 
-        
-    
-    
     <script>
-        const slides = document.querySelectorAll('.slide');
+      const slides = document.querySelectorAll(".slide");
+      let currentIndex = 0;
+      const intervalTime = 5000; // Time between transitions in milliseconds (adjust as needed)
+
+      function nextSlide() {
+        // Deactivate current slide
+        slides[currentIndex].classList.remove("active");
+        slides[currentIndex].style.transform = "scale(1)"; // Reset scale
+
+        // Move to the next slide
+        currentIndex = (currentIndex + 1) % slides.length;
+
+        // Activate the next slide
+        slides[currentIndex].classList.add("active");
+        slides[currentIndex].style.transform = "scale(1.1)"; // Apply initial scale
+      }
+
+      // Initialize the slider
+      slides[0].classList.add("active");
+      slides[0].style.transform = "scale(1.1)";
+
+      // Set up the interval for automatic sliding
+      setInterval(nextSlide, intervalTime);
+
+      // Hamburger menu toggle
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      // Close menu when a link is clicked
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+        });
+      });
+
+      // ============================================
+      // Testimonials Carousel (Infinite Loop)
+      // ============================================
+      (function () {
+        const wrapper = document.getElementById("testimonials-wrapper");
+        const indicators = document.querySelectorAll(
+          ".carousel-indicators .indicator",
+        );
+        const carouselContainer = document.querySelector(
+          ".testimonials-carousel",
+        );
+
+        if (!wrapper) return;
+
+        const originalCards = Array.from(
+          wrapper.querySelectorAll(".testimonial-card"),
+        );
+        const totalOriginalCards = originalCards.length; // 7 cards
+
         let currentIndex = 0;
-        const intervalTime = 5000; // Time between transitions in milliseconds (adjust as needed)
+        let autoPlayInterval;
+        let isHovered = false;
+        let touchStartX = 0;
+        let touchEndX = 0;
 
-        function nextSlide() {
-            // Deactivate current slide
-            slides[currentIndex].classList.remove('active');
-            slides[currentIndex].style.transform = 'scale(1)'; // Reset scale
-
-            // Move to the next slide
-            currentIndex = (currentIndex + 1) % slides.length;
-
-            // Activate the next slide
-            slides[currentIndex].classList.add('active');
-            slides[currentIndex].style.transform = 'scale(1.1)'; // Apply initial scale
+        // Clone cards and append for infinite loop effect
+        function setupInfiniteLoop() {
+          // Clone all original cards and append them
+          originalCards.forEach((card) => {
+            const clone = card.cloneNode(true);
+            clone.setAttribute("aria-hidden", "true");
+            wrapper.appendChild(clone);
+          });
         }
 
-        // Initialize the slider
-        slides[0].classList.add('active');
-        slides[0].style.transform = 'scale(1.1)';
+        // Calculate cards visible based on viewport
+        function getCardsVisible() {
+          return 1; // Always show one testimonial at a time
+        }
 
-        // Set up the interval for automatic sliding
-        setInterval(nextSlide, intervalTime);
+        // Get card dimensions
+        function getCardMetrics() {
+          const card = wrapper.querySelector(".testimonial-card");
+          if (!card) return { cardWidth: 0, gap: 24 };
+          const cardWidth = card.offsetWidth;
+          const gap = parseInt(getComputedStyle(wrapper).gap) || 24;
+          return { cardWidth, gap };
+        }
 
-        // Hamburger menu toggle
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
+        // Slide to index with optional instant jump (no transition)
+        function slideTo(index, instant = false) {
+          const { cardWidth, gap } = getCardMetrics();
+          if (!cardWidth) return;
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
+          currentIndex = index;
+          const offset = currentIndex * (cardWidth + gap);
+
+          if (instant) {
+            wrapper.classList.add("no-transition");
+            wrapper.style.transform = `translateX(-${offset}px)`;
+            // Force reflow to apply the instant change
+            wrapper.offsetHeight;
+            wrapper.classList.remove("no-transition");
+          } else {
+            wrapper.style.transform = `translateX(-${offset}px)`;
+          }
+
+          // Update indicators - cycle through 0-6 (for 7 original cards)
+          const indicatorIndex = currentIndex % totalOriginalCards;
+          indicators.forEach((indicator, i) => {
+            indicator.classList.toggle("active", i === indicatorIndex);
+          });
+        }
+
+        // Check and reset position if needed (for seamless loop)
+        function checkAndResetPosition() {
+          if (currentIndex >= totalOriginalCards) {
+            // We've scrolled past all original cards, jump back to start
+            const resetIndex = currentIndex - totalOriginalCards;
+            slideTo(resetIndex, true); // Instant jump
+          }
+        }
+
+        // Auto advance continuously
+        function startAutoPlay() {
+          stopAutoPlay();
+          autoPlayInterval = setInterval(() => {
+            if (!isHovered) {
+              slideTo(currentIndex + 1);
+              // Check reset after transition completes
+              setTimeout(checkAndResetPosition, 550);
+            }
+          }, 4000);
+        }
+
+        function stopAutoPlay() {
+          if (autoPlayInterval) {
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = null;
+          }
+        }
+
+        // Pause on hover
+        carouselContainer.addEventListener("mouseenter", () => {
+          isHovered = true;
         });
 
-        // Close menu when a link is clicked
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
+        carouselContainer.addEventListener("mouseleave", () => {
+          isHovered = false;
         });
 
-        // ============================================
-        // Testimonials Carousel (Infinite Loop)
-        // ============================================
-        (function() {
-            const wrapper = document.getElementById('testimonials-wrapper');
-            const indicators = document.querySelectorAll('.carousel-indicators .indicator');
-            const carouselContainer = document.querySelector('.testimonials-carousel');
-
-            if (!wrapper) return;
-
-            const originalCards = Array.from(wrapper.querySelectorAll('.testimonial-card'));
-            const totalOriginalCards = originalCards.length; // 7 cards
-
-            let currentIndex = 0;
-            let autoPlayInterval;
-            let isHovered = false;
-            let touchStartX = 0;
-            let touchEndX = 0;
-
-            // Clone cards and append for infinite loop effect
-            function setupInfiniteLoop() {
-                // Clone all original cards and append them
-                originalCards.forEach(card => {
-                    const clone = card.cloneNode(true);
-                    clone.setAttribute('aria-hidden', 'true');
-                    wrapper.appendChild(clone);
-                });
+        // Indicator clicks - navigate to that specific card
+        indicators.forEach((indicator, i) => {
+          indicator.addEventListener("click", () => {
+            // If we're in the cloned section, reset first
+            if (currentIndex >= totalOriginalCards) {
+              const equivalentIndex = currentIndex % totalOriginalCards;
+              slideTo(equivalentIndex, true);
             }
+            slideTo(i);
+            startAutoPlay(); // Reset timer after manual navigation
+          });
+        });
 
-            // Calculate cards visible based on viewport
-            function getCardsVisible() {
-                return 1; // Always show one testimonial at a time
+        // Touch/Swipe support
+        wrapper.addEventListener(
+          "touchstart",
+          (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+          },
+          { passive: true },
+        );
+
+        wrapper.addEventListener(
+          "touchend",
+          (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+          },
+          { passive: true },
+        );
+
+        function handleSwipe() {
+          const swipeThreshold = 50;
+          const diff = touchStartX - touchEndX;
+
+          if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+              // Swipe left - next
+              slideTo(currentIndex + 1);
+              setTimeout(checkAndResetPosition, 550);
+            } else {
+              // Swipe right - previous
+              if (currentIndex > 0) {
+                slideTo(currentIndex - 1);
+              } else {
+                // At start, jump to end of original cards for seamless backward loop
+                slideTo(totalOriginalCards - 1, true);
+              }
             }
+            startAutoPlay(); // Reset timer after swipe
+          }
+        }
 
-            // Get card dimensions
-            function getCardMetrics() {
-                const card = wrapper.querySelector('.testimonial-card');
-                if (!card) return { cardWidth: 0, gap: 24 };
-                const cardWidth = card.offsetWidth;
-                const gap = parseInt(getComputedStyle(wrapper).gap) || 24;
-                return { cardWidth, gap };
-            }
+        // Handle resize - recalculate positions
+        let resizeTimeout;
+        window.addEventListener("resize", () => {
+          clearTimeout(resizeTimeout);
+          resizeTimeout = setTimeout(() => {
+            // Reset to equivalent position in original cards
+            const equivalentIndex = currentIndex % totalOriginalCards;
+            slideTo(equivalentIndex, true);
+          }, 150);
+        });
 
-            // Slide to index with optional instant jump (no transition)
-            function slideTo(index, instant = false) {
-                const { cardWidth, gap } = getCardMetrics();
-                if (!cardWidth) return;
-
-                currentIndex = index;
-                const offset = currentIndex * (cardWidth + gap);
-
-                if (instant) {
-                    wrapper.classList.add('no-transition');
-                    wrapper.style.transform = `translateX(-${offset}px)`;
-                    // Force reflow to apply the instant change
-                    wrapper.offsetHeight;
-                    wrapper.classList.remove('no-transition');
-                } else {
-                    wrapper.style.transform = `translateX(-${offset}px)`;
-                }
-
-                // Update indicators - cycle through 0-6 (for 7 original cards)
-                const indicatorIndex = currentIndex % totalOriginalCards;
-                indicators.forEach((indicator, i) => {
-                    indicator.classList.toggle('active', i === indicatorIndex);
-                });
-            }
-
-            // Check and reset position if needed (for seamless loop)
-            function checkAndResetPosition() {
-                if (currentIndex >= totalOriginalCards) {
-                    // We've scrolled past all original cards, jump back to start
-                    const resetIndex = currentIndex - totalOriginalCards;
-                    slideTo(resetIndex, true); // Instant jump
-                }
-            }
-
-            // Auto advance continuously
-            function startAutoPlay() {
-                stopAutoPlay();
-                autoPlayInterval = setInterval(() => {
-                    if (!isHovered) {
-                        slideTo(currentIndex + 1);
-                        // Check reset after transition completes
-                        setTimeout(checkAndResetPosition, 550);
-                    }
-                }, 4000);
-            }
-
-            function stopAutoPlay() {
-                if (autoPlayInterval) {
-                    clearInterval(autoPlayInterval);
-                    autoPlayInterval = null;
-                }
-            }
-
-            // Pause on hover
-            carouselContainer.addEventListener('mouseenter', () => {
-                isHovered = true;
-            });
-
-            carouselContainer.addEventListener('mouseleave', () => {
-                isHovered = false;
-            });
-
-            // Indicator clicks - navigate to that specific card
-            indicators.forEach((indicator, i) => {
-                indicator.addEventListener('click', () => {
-                    // If we're in the cloned section, reset first
-                    if (currentIndex >= totalOriginalCards) {
-                        const equivalentIndex = currentIndex % totalOriginalCards;
-                        slideTo(equivalentIndex, true);
-                    }
-                    slideTo(i);
-                    startAutoPlay(); // Reset timer after manual navigation
-                });
-            });
-
-            // Touch/Swipe support
-            wrapper.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-            }, { passive: true });
-
-            wrapper.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            }, { passive: true });
-
-            function handleSwipe() {
-                const swipeThreshold = 50;
-                const diff = touchStartX - touchEndX;
-
-                if (Math.abs(diff) > swipeThreshold) {
-                    if (diff > 0) {
-                        // Swipe left - next
-                        slideTo(currentIndex + 1);
-                        setTimeout(checkAndResetPosition, 550);
-                    } else {
-                        // Swipe right - previous
-                        if (currentIndex > 0) {
-                            slideTo(currentIndex - 1);
-                        } else {
-                            // At start, jump to end of original cards for seamless backward loop
-                            slideTo(totalOriginalCards - 1, true);
-                        }
-                    }
-                    startAutoPlay(); // Reset timer after swipe
-                }
-            }
-
-            // Handle resize - recalculate positions
-            let resizeTimeout;
-            window.addEventListener('resize', () => {
-                clearTimeout(resizeTimeout);
-                resizeTimeout = setTimeout(() => {
-                    // Reset to equivalent position in original cards
-                    const equivalentIndex = currentIndex % totalOriginalCards;
-                    slideTo(equivalentIndex, true);
-                }, 150);
-            });
-
-            // Initialize
-            setupInfiniteLoop();
-            slideTo(0);
-            startAutoPlay();
-        })();
+        // Initialize
+        setupInfiniteLoop();
+        slideTo(0);
+        startAutoPlay();
+      })();
     </script>
-<!-- External JS controlling the header behavior -->
+    <!-- External JS controlling the header behavior -->
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
