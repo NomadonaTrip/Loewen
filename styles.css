@@ -2316,7 +2316,7 @@ form button:hover {
     flex-direction: column;
     text-align: center;
     gap: 12px;
-    min-height: 260px;
+    min-height: 310px;
     border-radius: 12px;
     padding: 24px 20px;
   }
@@ -2327,16 +2327,16 @@ form button:hover {
   }
 
   .key-service-card .card-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 12px;
+    width: 80px;
+    height: 80px;
+    border-radius: 14px;
     background: rgba(87, 142, 126, 0.2);
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
 
   .key-service-card img {
-    width: 36px;
-    height: 36px;
+    width: 60px;
+    height: 60px;
   }
 
   .key-service-card .card-content {
@@ -2345,19 +2345,19 @@ form button:hover {
   }
 
   .key-service-card h3 {
-    font-size: 1rem;
-    margin: 0 0 6px 0;
+    font-size: 1.15rem;
+    margin: 0 0 10px 0;
   }
 
   .key-service-card p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin: 0 0 auto 0;
     line-height: 1.6;
     text-align: center;
   }
 
   .key-service-card .learn-more-link {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     margin-top: auto;
   }
 
