@@ -1581,6 +1581,114 @@ button:hover {
   transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity change */
 }
 
+/* ============================================ */
+/* Service Image Before/After Captions         */
+/* ============================================ */
+
+/* Position relative for caption positioning */
+#brush-clearing,
+#tree-cutting,
+#demolition,
+#Pruning,
+#sodding-seeding,
+#grass-cutting,
+#flower-shrubs,
+#leaf-cleanup,
+#yard-cleanup,
+#painting,
+#snow-clearing,
+#hydro-digs,
+#hardwood-flooring,
+#cleaning,
+#handyman-repairs,
+#junk-sorting {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Base caption styles */
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 14px 16px;
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.7) 40%,
+        rgba(0, 0, 0, 0.3) 70%,
+        transparent 100%
+    );
+    color: var(--text-cream);
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* "After" caption - visible by default */
+.caption-after {
+    opacity: 1;
+}
+
+/* "Before" caption - hidden by default */
+.caption-before {
+    opacity: 0;
+}
+
+/* Hide "After" caption on hover */
+#brush-clearing:hover .caption-after,
+#tree-cutting:hover .caption-after,
+#demolition:hover .caption-after,
+#Pruning:hover .caption-after,
+#sodding-seeding:hover .caption-after,
+#grass-cutting:hover .caption-after,
+#flower-shrubs:hover .caption-after,
+#leaf-cleanup:hover .caption-after,
+#yard-cleanup:hover .caption-after,
+#painting:hover .caption-after,
+#snow-clearing:hover .caption-after,
+#hydro-digs:hover .caption-after,
+#hardwood-flooring:hover .caption-after,
+#cleaning:hover .caption-after,
+#handyman-repairs:hover .caption-after,
+#junk-sorting:hover .caption-after {
+    opacity: 0;
+}
+
+/* Show "Before" caption on hover */
+#brush-clearing:hover .caption-before,
+#tree-cutting:hover .caption-before,
+#demolition:hover .caption-before,
+#Pruning:hover .caption-before,
+#sodding-seeding:hover .caption-before,
+#grass-cutting:hover .caption-before,
+#flower-shrubs:hover .caption-before,
+#leaf-cleanup:hover .caption-before,
+#yard-cleanup:hover .caption-before,
+#painting:hover .caption-before,
+#snow-clearing:hover .caption-before,
+#hydro-digs:hover .caption-before,
+#hardwood-flooring:hover .caption-before,
+#cleaning:hover .caption-before,
+#handyman-repairs:hover .caption-before,
+#junk-sorting:hover .caption-before {
+    opacity: 1;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .image-caption {
+        transition: none;
+    }
+}
+
 .take-care {
   display: flex;
   background-color: var(--text-light);
@@ -2288,6 +2396,13 @@ form button:hover {
   .detail p {
     font-size: 14px;
   }
+
+  /* Caption responsive - 768px */
+  .image-caption {
+    font-size: 0.8rem;
+    padding: 12px 14px;
+    letter-spacing: 0.6px;
+  }
 }
 
 /* Mobile phones (480px and below) */
@@ -2673,5 +2788,12 @@ form button:hover {
 
   .footer-bottom {
     font-size: 11px;
+  }
+
+  /* Caption responsive - 480px mobile */
+  .image-caption {
+    font-size: 0.75rem;
+    padding: 10px 12px;
+    letter-spacing: 0.4px;
   }
 }
