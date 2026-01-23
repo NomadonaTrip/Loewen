@@ -1364,7 +1364,7 @@ button:hover {
   display: flex;
   justify-content: center;
   opacity: 1;
-  background-image: url("/images/Services-Pics/Pruning_before.jpg"); /* Background image */
+  background-image: url("images/Services-Pics/Pruning_before.jpg"); /* Background image */
   background-size: cover; /* Cover the entire div */
   margin-top: 20px; /* Space above the div */
 }
@@ -1383,7 +1383,7 @@ button:hover {
   display: flex;
   justify-content: center;
   opacity: 1;
-  background-image: url("/images/Services-Pics/Sodding_before.jpg"); /* Background image */
+  background-image: url("images/Services-Pics/Sodding_before.jpg"); /* Background image */
   background-size: cover; /* Cover the entire div */
   margin-top: 20px; /* Space above the div */
 }
@@ -1402,7 +1402,7 @@ button:hover {
   display: flex;
   justify-content: center;
   opacity: 1;
-  background-image: url("/images/Services-Pics/Grass_cutting_before.jpg"); /* Background image */
+  background-image: url("images/Services-Pics/Grass_cutting_before.jpg"); /* Background image */
   background-size: cover; /* Cover the entire div */
   margin-top: 20px; /* Space above the div */
 }
@@ -1421,7 +1421,7 @@ button:hover {
   display: flex;
   justify-content: center;
   opacity: 1;
-  background-image: url("/images/Services-Pics/Flower_bed_before.jpg"); /* Background image */
+  background-image: url("images/Services-Pics/Flower_bed_before.jpg"); /* Background image */
   background-size: cover; /* Cover the entire div */
   margin-top: 20px; /* Space above the div */
 }
@@ -1440,7 +1440,7 @@ button:hover {
   display: flex;
   justify-content: center;
   opacity: 1;
-  background-image: url("/images/Services-Pics/Leaf_removal_before.jpg"); /* Background image */
+  background-image: url("images/Services-Pics/Leaf_removal_before.jpg"); /* Background image */
   background-size: cover; /* Cover the entire div */
   margin-top: 20px; /* Space above the div */
 }
@@ -1459,7 +1459,7 @@ button:hover {
   display: flex;
   justify-content: center;
   opacity: 1;
-  background-image: url("/images/Services-Pics/General_yard_cleanups_before.jpg"); /* Background image */
+  background-image: url("images/Services-Pics/General_yard_cleanups_before.jpg"); /* Background image */
   background-size: cover; /* Cover the entire div */
   margin-top: 20px; /* Space above the div */
 }
@@ -1478,7 +1478,7 @@ button:hover {
   display: flex;
   justify-content: center;
   opacity: 1;
-  background-image: url("/images/Services-Pics/Painting_before.jpg"); /* Background image */
+  background-image: url("images/Services-Pics/Painting_before.jpg"); /* Background image */
   background-size: cover; /* Cover the entire div */
   margin-top: 20px; /* Space above the div */
 }
@@ -1497,7 +1497,7 @@ button:hover {
   display: flex;
   justify-content: center;
   opacity: 1;
-  background-image: url("/images/Services-Pics/Snow_clearing_before.jpg"); /* Background image */
+  background-image: url("images/Services-Pics/Snow_clearing_before.jpg"); /* Background image */
   background-size: cover; /* Cover the entire div */
   margin-top: 20px; /* Space above the div */
 }
@@ -1516,7 +1516,7 @@ button:hover {
   display: flex;
   justify-content: center;
   opacity: 1;
-  background-image: url("/images/Services-Pics/Hydro_dig_before.jpg"); /* Background image */
+  background-image: url("images/Services-Pics/Hydro_dig_before.jpg"); /* Background image */
   background-size: cover; /* Cover the entire div */
   margin-top: 20px; /* Space above the div */
 }
@@ -1535,7 +1535,7 @@ button:hover {
   display: flex;
   justify-content: center;
   opacity: 1;
-  background-image: url("/images/Services-Pics/Hardwood_floor_before.jpg"); /* Background image */
+  background-image: url("images/Services-Pics/Hardwood_floor_before.jpg"); /* Background image */
   background-size: cover; /* Cover the entire div */
   margin-top: 20px; /* Space above the div */
 }
@@ -1554,7 +1554,7 @@ button:hover {
   display: flex;
   justify-content: center;
   opacity: 1;
-  background-image: url("/images/Services-Pics/Cleaning_before.jpg"); /* Background image */
+  background-image: url("images/Services-Pics/Cleaning_before.jpg"); /* Background image */
   background-size: cover; /* Cover the entire div */
   margin-top: 20px; /* Space above the div */
 }
@@ -1573,7 +1573,7 @@ button:hover {
   display: flex;
   justify-content: center;
   opacity: 1;
-  background-image: url("/images/Services-Pics/Other_yard_cleanups_before_1.jpg"); /* Background image */
+  background-image: url("images/Services-Pics/Other_yard_cleanups_before_1.jpg"); /* Background image */
   background-size: cover; /* Cover the entire div */
   margin-top: 20px; /* Space above the div */
 }
