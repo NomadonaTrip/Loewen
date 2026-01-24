@@ -527,6 +527,7 @@ p {
   min-height: 320px;
   position: relative;
   overflow: hidden;
+  contain: paint;
 }
 
 .key-service-card::before {
@@ -556,6 +557,7 @@ p {
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
+  z-index: 0;
 }
 
 .key-service-card:hover {
@@ -566,9 +568,7 @@ p {
   );
   border-color: rgba(245, 236, 213, 0.3);
   transform: translateY(-8px);
-  box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.3),
-    0 0 60px rgba(87, 142, 126, 0.15);
+  box-shadow: 0 15px 25px -10px rgba(0, 0, 0, 0.3);
 }
 
 .key-service-card:hover::after {
@@ -660,6 +660,7 @@ p {
   transition: all 0.3s ease;
   position: relative;
   z-index: 2;
+  transform: translateX(0);
 }
 
 .key-service-card .learn-more-link:hover {
