@@ -1,0 +1,8 @@
+# robots.txt for Loewen Property Works
+# https://loewenpropertyworks.ca
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://loewenpropertyworks.ca/sitemap.xml
