@@ -1379,6 +1379,7 @@ button:hover {
   transition: var(--animation-timing);
   margin-top: 16px;
   border: 1px solid var(--text-light);
+  align-self: flex-start;
 }
 
 .portfolio-cta:hover {
