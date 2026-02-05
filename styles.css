@@ -1367,6 +1367,25 @@ button:hover {
   font-size: 14px;
 }
 
+/* Portfolio CTA button */
+.portfolio-cta {
+  display: inline-block;
+  background-color: var(--secondary-dark);
+  color: var(--text-light);
+  text-decoration: none;
+  padding: calc(0.667em + 2px) calc(1.333em + 2px);
+  font-size: 0.875rem;
+  font-weight: 400;
+  transition: var(--animation-timing);
+  margin-top: 16px;
+  border: 1px solid var(--text-light);
+}
+
+.portfolio-cta:hover {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+}
+
 /* Service image containers - common responsive styles */
 #brush-clearing,
 #tree-cutting,
