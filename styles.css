@@ -3391,13 +3391,6 @@ form button:hover {
   transition: opacity 0.3s ease;
 }
 
-/* Active nav link */
-.active-nav {
-  color: var(--text-cream) !important;
-  border-bottom: 2px solid var(--text-cream);
-  padding-bottom: 2px;
-}
-
 /* ================================
    Products Page Responsive
    ================================ */
