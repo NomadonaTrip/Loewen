@@ -86,58 +86,185 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ItemList",
-        "itemListElement": [
+        "@graph": [
           {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@type": "Product",
-              "name": "Solar-Powered Starburst Stake Lights",
-              "description": "Multi-coloured solar-powered yard lights with multiple flashing pattern settings and a steady-on mode. Best used from April through September.",
-              "image": "https://loewenpropertyworks.ca/images/products/lights_night.jpg",
-              "offers": [
-                {
-                  "@type": "Offer",
-                  "price": "12.00",
-                  "priceCurrency": "CAD",
-                  "description": "Single light",
-                  "availability": "https://schema.org/InStock"
-                },
-                {
-                  "@type": "Offer",
-                  "price": "20.00",
-                  "priceCurrency": "CAD",
-                  "description": "Box of two lights",
-                  "availability": "https://schema.org/InStock"
-                }
-              ]
+            "@type": "MerchantReturnPolicy",
+            "@id": "#return-policy-final-sale",
+            "applicableCountry": "CA",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+          },
+          {
+            "@type": "MerchantReturnPolicy",
+            "@id": "#return-policy-exchange",
+            "applicableCountry": "CA",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 14,
+            "returnMethod": "https://schema.org/ReturnInStore",
+            "returnFees": "https://schema.org/FreeReturn",
+            "refundType": "https://schema.org/ExchangeRefund"
+          },
+          {
+            "@type": "OfferShippingDetails",
+            "@id": "#kwc-free-shipping",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "CAD"
+            },
+            "shippingDestination": [
+              { "@type": "DefinedRegion", "addressCountry": "CA", "postalCodePrefix": "N2" },
+              { "@type": "DefinedRegion", "addressCountry": "CA", "postalCodePrefix": "N1R" },
+              { "@type": "DefinedRegion", "addressCountry": "CA", "postalCodePrefix": "N1S" },
+              { "@type": "DefinedRegion", "addressCountry": "CA", "postalCodePrefix": "N1T" },
+              { "@type": "DefinedRegion", "addressCountry": "CA", "postalCodePrefix": "N3C" },
+              { "@type": "DefinedRegion", "addressCountry": "CA", "postalCodePrefix": "N3H" }
+            ],
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 0,
+                "maxValue": 3,
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 0,
+                "maxValue": 1,
+                "unitCode": "DAY"
+              }
             }
           },
           {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@type": "Product",
-              "name": "Canada Forever T-Shirt",
-              "description": "100% cotton black Canada Forever t-shirts. Available in 2XL and 4XL (runs small — closer to L and 2XL).",
-              "offers": [
-                {
-                  "@type": "Offer",
-                  "price": "15.00",
-                  "priceCurrency": "CAD",
-                  "description": "Single shirt",
-                  "availability": "https://schema.org/InStock"
-                },
-                {
-                  "@type": "Offer",
-                  "price": "25.00",
-                  "priceCurrency": "CAD",
-                  "description": "Two shirts",
-                  "availability": "https://schema.org/InStock"
+            "@type": "ItemList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "Product",
+                  "name": "Solar-Powered Starburst Stake Lights",
+                  "url": "https://loewenpropertyworks.ca/products.html#solar-lights",
+                  "description": "Multi-coloured solar-powered yard lights with multiple flashing pattern settings and a steady-on mode. Best used from April through September.",
+                  "image": [
+                    "https://loewenpropertyworks.ca/images/products/lights_night.jpg",
+                    "https://loewenpropertyworks.ca/images/products/lights_day.jpg",
+                    "https://loewenpropertyworks.ca/images/products/lights_mounted.jpg",
+                    "https://loewenpropertyworks.ca/images/products/lights_box.jpg",
+                    "https://loewenpropertyworks.ca/images/products/lights_unboxed.jpg",
+                    "https://loewenpropertyworks.ca/images/products/lights_unboxed_unit.jpg"
+                  ],
+                  "brand": {
+                    "@type": "Brand",
+                    "name": "Loewen Property Works Inc."
+                  },
+                  "offers": [
+                    {
+                      "@type": "Offer",
+                      "price": "12.00",
+                      "priceCurrency": "CAD",
+                      "description": "Single light",
+                      "availability": "https://schema.org/InStock",
+                      "hasMerchantReturnPolicy": { "@id": "#return-policy-final-sale" },
+                      "shippingDetails": { "@id": "#kwc-free-shipping" }
+                    },
+                    {
+                      "@type": "Offer",
+                      "price": "20.00",
+                      "priceCurrency": "CAD",
+                      "description": "Box of two lights",
+                      "availability": "https://schema.org/InStock",
+                      "hasMerchantReturnPolicy": { "@id": "#return-policy-final-sale" },
+                      "shippingDetails": { "@id": "#kwc-free-shipping" }
+                    }
+                  ]
                 }
-              ]
-            }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "Product",
+                  "name": "Canada Forever T-Shirt",
+                  "url": "https://loewenpropertyworks.ca/products.html#tshirts",
+                  "description": "100% cotton black Canada Forever t-shirts. Available in 2XL and 4XL (runs small — closer to L and 2XL).",
+                  "image": [
+                    "https://loewenpropertyworks.ca/images/products/tshirt.jpg",
+                    "https://loewenpropertyworks.ca/images/products/tshirt_back.jpg",
+                    "https://loewenpropertyworks.ca/images/products/tshirt_modeled_1.jpg",
+                    "https://loewenpropertyworks.ca/images/products/tshirt_packed.jpg"
+                  ],
+                  "brand": {
+                    "@type": "Brand",
+                    "name": "Loewen Property Works Inc."
+                  },
+                  "hasVariant": [
+                    {
+                      "@type": "Product",
+                      "name": "Canada Forever T-Shirt — 2XL",
+                      "size": "2XL",
+                      "description": "Labelled 2XL (runs small — closer to L in practice).",
+                      "image": "https://loewenpropertyworks.ca/images/products/tshirt.jpg",
+                      "brand": {
+                        "@type": "Brand",
+                        "name": "Loewen Property Works Inc."
+                      },
+                      "offers": [
+                        {
+                          "@type": "Offer",
+                          "price": "15.00",
+                          "priceCurrency": "CAD",
+                          "description": "Single shirt",
+                          "availability": "https://schema.org/InStock",
+                          "hasMerchantReturnPolicy": { "@id": "#return-policy-exchange" },
+                          "shippingDetails": { "@id": "#kwc-free-shipping" }
+                        },
+                        {
+                          "@type": "Offer",
+                          "price": "25.00",
+                          "priceCurrency": "CAD",
+                          "description": "Two shirts",
+                          "availability": "https://schema.org/InStock",
+                          "hasMerchantReturnPolicy": { "@id": "#return-policy-exchange" },
+                          "shippingDetails": { "@id": "#kwc-free-shipping" }
+                        }
+                      ]
+                    },
+                    {
+                      "@type": "Product",
+                      "name": "Canada Forever T-Shirt — 4XL",
+                      "size": "4XL",
+                      "description": "Labelled 4XL (runs small — closer to 2XL in practice).",
+                      "image": "https://loewenpropertyworks.ca/images/products/tshirt.jpg",
+                      "brand": {
+                        "@type": "Brand",
+                        "name": "Loewen Property Works Inc."
+                      },
+                      "offers": [
+                        {
+                          "@type": "Offer",
+                          "price": "15.00",
+                          "priceCurrency": "CAD",
+                          "description": "Single shirt",
+                          "availability": "https://schema.org/InStock",
+                          "hasMerchantReturnPolicy": { "@id": "#return-policy-exchange" },
+                          "shippingDetails": { "@id": "#kwc-free-shipping" }
+                        },
+                        {
+                          "@type": "Offer",
+                          "price": "25.00",
+                          "priceCurrency": "CAD",
+                          "description": "Two shirts",
+                          "availability": "https://schema.org/InStock",
+                          "hasMerchantReturnPolicy": { "@id": "#return-policy-exchange" },
+                          "shippingDetails": { "@id": "#kwc-free-shipping" }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
           }
         ]
       }
