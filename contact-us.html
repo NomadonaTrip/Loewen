@@ -214,7 +214,12 @@
           />
           <button type="submit">Send</button>
         </form>
-        <div id="form-status" role="status" aria-live="polite"></div>
+        <div
+          id="form-status"
+          role="status"
+          aria-live="polite"
+          tabindex="-1"
+        ></div>
       </div>
     </div>
     <!-- The footer begins here -->
@@ -282,11 +287,16 @@
         );
         submitButton.disabled = true;
         submitButton.textContent = "Sending…";
+        formStatus.className = "";
+        formStatus.textContent = "";
+        const abortController = new AbortController();
+        const fetchTimeout = setTimeout(() => abortController.abort(), 15000);
         try {
           const response = await fetch(contactForm.action, {
             method: "POST",
             body: new FormData(contactForm),
             headers: { Accept: "application/json" },
+            signal: abortController.signal,
           });
           if (!response.ok) {
             throw new Error("Formspree responded " + response.status);
@@ -298,12 +308,15 @@
             "Thanks" +
             (name ? ", " + name : "") +
             "! Your message has been sent. We typically reply within one business day.";
+          formStatus.focus();
         } catch (error) {
           submitButton.disabled = false;
           submitButton.textContent = "Send";
           formStatus.className = "form-status-error";
           formStatus.textContent =
             "Sorry — something went wrong sending your message. Please try again, or call (519) 588-2264 or email robl@loewenpropertyworks.ca.";
+        } finally {
+          clearTimeout(fetchTimeout);
         }
       });
     </script>
