@@ -270,6 +270,42 @@
           navLinks.classList.remove("active");
         });
       });
+
+      // Contact form: AJAX submit with inline confirmation
+      const contactForm = document.getElementById("contact-form");
+      const formStatus = document.getElementById("form-status");
+
+      contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const submitButton = contactForm.querySelector(
+          "button[type='submit']",
+        );
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending…";
+        try {
+          const response = await fetch(contactForm.action, {
+            method: "POST",
+            body: new FormData(contactForm),
+            headers: { Accept: "application/json" },
+          });
+          if (!response.ok) {
+            throw new Error("Formspree responded " + response.status);
+          }
+          const name = document.getElementById("name").value.trim();
+          contactForm.style.display = "none";
+          formStatus.className = "form-status-success";
+          formStatus.textContent =
+            "Thanks" +
+            (name ? ", " + name : "") +
+            "! Your message has been sent. We typically reply within one business day.";
+        } catch (error) {
+          submitButton.disabled = false;
+          submitButton.textContent = "Send";
+          formStatus.className = "form-status-error";
+          formStatus.textContent =
+            "Sorry — something went wrong sending your message. Please try again, or call (519) 588-2264 or email robl@loewenpropertyworks.ca.";
+        }
+      });
     </script>
     <script src="js/script.js"></script>
   </body>
