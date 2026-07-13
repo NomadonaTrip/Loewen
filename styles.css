@@ -1968,6 +1968,27 @@ form button {
 form button:hover {
   background-color: var(--primary-dark);
 }
+/* Contact form: inline submission status messages */
+#form-status {
+  display: none;
+  padding: 16px 20px;
+  margin-top: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  border-left: 4px solid;
+  box-sizing: border-box;
+}
+#form-status.form-status-success {
+  display: block;
+  background-color: var(--accent-green);
+  border-color: var(--text-green);
+}
+#form-status.form-status-error {
+  display: block;
+  background-color: #3d1818;
+  border-color: #8e5757;
+}
 /* About Us: This section defines the styling for the About Us page */
 .about-us {
   display: flex;
