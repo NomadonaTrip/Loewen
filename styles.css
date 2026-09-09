@@ -63,7 +63,9 @@ body {
   position: fixed;
   width: 100%;
   z-index: 100;
-  padding: 0;
+  /* Bar stays full-bleed; its contents sit in the same 1200px column as
+     .key-services-grid. Mobile breakpoints below override this padding. */
+  padding: 0 max(var(--spacing-unit), calc((100% - 1200px) / 2));
   box-sizing: border-box;
   min-height: 70px;
   flex-shrink: 0;
@@ -74,9 +76,12 @@ body {
   font-weight: 400;
   display: flex;
   align-items: center;
-  margin-left: 40px;
+  /* the navbar's own padding now sets the left edge (1200px column) */
+  margin-left: 0;
   gap: 10px;
   text-decoration: none;
+  /* .logo is an <a> to the home page — keep the UA link colours out */
+  color: inherit;
 }
 .logo img {
   width: 50px;
@@ -148,7 +153,8 @@ body {
 
 .nav-links {
   display: flex;
-  margin-right: 40px;
+  /* the navbar's own padding now sets the right edge (1200px column) */
+  margin-right: 0;
 }
 .nav-links ul {
   display: flex;
@@ -190,6 +196,53 @@ body {
   color: #32373c;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+/* js/script.js adds .active to every nav link whose href matches the current
+   page. On contact-us.html that also catches the CTA wrapper, painting a cream
+   ring around the button. The CTA carries its own styling, so opt it out. */
+.nav-links ul li:last-child a.active {
+  background-color: transparent;
+  color: var(--text-cream);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* Only one Contact link in the header: the CTA button on desktop, the plain
+   menu item on mobile (where the CTA is hidden — see the 768px breakpoint). */
+.nav-links ul li.nav-contact-item {
+  display: none;
+}
+
+/* CTA hover: a white border fades in and the envelope icon rotates.
+   The wrapper must stay transparent — otherwise the generic rules below hand
+   the black fill off from the button (138x45) to its larger wrapper <a>
+   (154x61), a 1.5x jump in painted area that reads as the button resizing. */
+.nav-links ul li:last-child a:hover {
+  background-color: transparent;
+}
+.nav-links ul li:last-child button {
+  /* transparent at rest so the hover border adds no layout shift */
+  border: 1px solid transparent;
+  transition:
+    border-color var(--animation-timing),
+    background-color var(--animation-timing);
+}
+.nav-links ul li:last-child button:hover {
+  background-color: var(--primary-dark);
+  border: 1px solid var(--text-light);
+}
+
+/* The letter icon spins on hover, easing in and out both ways. */
+.nav-links ul li:last-child button svg {
+  display: inline-block;
+  vertical-align: middle;
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: transform 300ms ease-in-out;
+}
+.nav-links ul li:last-child button:hover svg {
+  transform: rotate(360deg);
 }
 
 /* Call button in nav */
@@ -837,7 +890,9 @@ p {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-unit);
-  max-width: 1400px;
+  /* 1200px content box + 24px gutters matches .key-services-grid */
+  max-width: 1248px;
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 0 var(--spacing-unit);
 }
@@ -902,6 +957,28 @@ p {
   display: flex;
   justify-content: center;
   padding: 40px 0;
+}
+.service-button button {
+  background-color: var(--text-cream);
+  color: var(--accent-green);
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 1rem;
+  /* transparent in the resting state so the hover border adds no layout shift */
+  border: 1px solid transparent;
+  padding: calc(0.667em + 2px) calc(1.333em + 2px);
+  cursor: pointer;
+  transition: var(--animation-timing);
+  border-radius: 2rem;
+  width: auto;
+  height: auto;
+}
+.service-button button:hover {
+  background-color: transparent;
+  color: var(--text-cream);
+  /* full shorthand: the generic `button:hover { border: none }` below
+     ties on specificity and would otherwise zero the border width */
+  border: 1px solid var(--text-cream);
 }
 button {
   background-color: var(--secondary-dark);
@@ -1881,6 +1958,12 @@ iframe {
   max-width: 1600px;
   margin: 0 auto;
 }
+/* Align the coverage map with the navbar items and .contact-us-section:
+   the same 1200px column, and the wrapper's 24px padding matches the
+   navbar's minimum gutter below that width. */
+.coverage-map iframe {
+  max-width: 1200px;
+}
 .contact-us-section {
   display: flex;
   width: 100%;
@@ -1910,6 +1993,16 @@ iframe {
   font-weight: 400;
   margin: 0 0 8px 0;
   line-height: 1.6;
+}
+
+/* TEMP until ~2026-10-09: note beside the phone number while WhatsApp is the
+   primary contact method. Remove with the .whatsapp-note span in contact-us.html. */
+.whatsapp-note {
+  display: inline-block;
+  color: var(--text-cream);
+  font-size: 0.875rem;
+  font-style: italic;
+  white-space: nowrap;
 }
 
 .contact-us-form {
@@ -2386,9 +2479,15 @@ form button:hover {
     justify-self: center;
   }
 
-  /* Hide phone button in mobile menu */
+  /* Hide the CTA button in the mobile menu... */
   .nav-links ul li:last-child {
     display: none;
+  }
+
+  /* ...so the plain Contact Us menu item takes over as the single contact
+     link on mobile. */
+  .nav-links ul li.nav-contact-item {
+    display: flex;
   }
 
   .nav-links {
