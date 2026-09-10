@@ -2002,7 +2002,8 @@ iframe {
   color: var(--text-cream);
   font-size: 0.875rem;
   font-style: italic;
-  white-space: nowrap;
+  /* no nowrap: the note is long enough that it must be free to wrap
+     rather than push the line past the container on narrow screens */
 }
 
 .contact-us-form {
