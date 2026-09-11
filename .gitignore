@@ -2,6 +2,7 @@
 *.pdf
 *.ai
 *.log
+prompts/
 2025/
 2026/
 .playwright-mcp/

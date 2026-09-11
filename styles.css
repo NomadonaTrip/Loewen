@@ -1998,12 +1998,12 @@ iframe {
 /* TEMP until ~2026-10-09: note beside the phone number while WhatsApp is the
    primary contact method. Remove with the .whatsapp-note span in contact-us.html. */
 .whatsapp-note {
-  display: inline-block;
+  /* sits on its own line directly beneath the number, and is free to wrap
+     rather than push the line past the container on narrow screens */
+  display: block;
   color: var(--text-cream);
   font-size: 0.875rem;
   font-style: italic;
-  /* no nowrap: the note is long enough that it must be free to wrap
-     rather than push the line past the container on narrow screens */
 }
 
 .contact-us-form {
