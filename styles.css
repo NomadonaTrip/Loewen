@@ -181,7 +181,24 @@ body {
   transition: var(--animation-timing);
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  /* keep "About Us" etc. on one line rather than growing the bar */
+  white-space: nowrap;
 }
+
+/* Narrow desktops (above the 768px hamburger breakpoint): the five links plus
+   the "Call 519-588-2264" button don't fit beside the full logo, so drop the
+   company name next to the logo mark, and below 900px tighten the link gaps. */
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+  .logo > p {
+    display: none;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 900px) {
+  .nav-links ul {
+    gap: 4px;
+  }
+}
+
 .nav-links a:hover {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
@@ -208,13 +225,7 @@ body {
   padding-right: 0.5rem;
 }
 
-/* Only one Contact link in the header: the CTA button on desktop, the plain
-   menu item on mobile (where the CTA is hidden — see the 768px breakpoint). */
-.nav-links ul li.nav-contact-item {
-  display: none;
-}
-
-/* CTA hover: a white border fades in and the envelope icon rotates.
+/* CTA hover: a white border fades in and the phone icon rotates.
    The wrapper must stay transparent — otherwise the generic rules below hand
    the black fill off from the button (138x45) to its larger wrapper <a>
    (154x61), a 1.5x jump in painted area that reads as the button resizing. */
@@ -233,7 +244,7 @@ body {
   border: 1px solid var(--text-light);
 }
 
-/* The letter icon spins on hover, easing in and out both ways. */
+/* The phone icon spins on hover, easing in and out both ways. */
 .nav-links ul li:last-child button svg {
   display: inline-block;
   vertical-align: middle;
@@ -1995,17 +2006,6 @@ iframe {
   line-height: 1.6;
 }
 
-/* TEMP until ~2026-10-09: note beside the phone number while WhatsApp is the
-   primary contact method. Remove with the .whatsapp-note span in contact-us.html. */
-.whatsapp-note {
-  /* sits on its own line directly beneath the number, and is free to wrap
-     rather than push the line past the container on narrow screens */
-  display: block;
-  color: var(--text-cream);
-  font-size: 0.875rem;
-  font-style: italic;
-}
-
 .contact-us-form {
   flex: 1;
   width: 100%;
@@ -2480,15 +2480,9 @@ form button:hover {
     justify-self: center;
   }
 
-  /* Hide the CTA button in the mobile menu... */
+  /* Hide the CTA button in the mobile menu */
   .nav-links ul li:last-child {
     display: none;
-  }
-
-  /* ...so the plain Contact Us menu item takes over as the single contact
-     link on mobile. */
-  .nav-links ul li.nav-contact-item {
-    display: flex;
   }
 
   .nav-links {
