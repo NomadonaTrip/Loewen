@@ -1113,6 +1113,10 @@
 
       // Initialize the slider
       slides[0].classList.add("active");
+      // Commit scale(1) as the starting frame before zooming; otherwise the
+      // browser sees scale(1.1) as the initial value and skips the transition.
+      slides[0].style.transform = "scale(1)";
+      getComputedStyle(slides[0]).transform;
       slides[0].style.transform = "scale(1.1)";
       startAutoPlay();
 
