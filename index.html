@@ -77,9 +77,11 @@
       content="MZoILI1kqhSausEy2-DsG9wm2A_vrPUwaIE8FLxC-r4"
     />
     <link rel="canonical" href="https://loewenpropertyworks.ca/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
     />
     <!-- Favicon links -->
     <link
@@ -253,109 +255,67 @@
     <div class="hero">
       <div class="hero-image">
         <div class="slide active">
-          <img
-            src="images/hero_banner/leaf removal_before.jpg"
-            alt="Before Leaf removal"
-          />
+          <img src="images/hero_banner/leaf%20removal_before.jpg" alt="Before Leaf removal" fetchpriority="high" />
           <span class="hero-caption">Before Leaf Removal</span>
         </div>
         <div class="slide">
-          <img
-            src="images/hero_banner/leaf_removal_after.jpg"
-            alt="After leaf removal"
-          />
+          <img data-src="images/hero_banner/leaf_removal_after.jpg" alt="After leaf removal" />
           <span class="hero-caption">After Leaf Removal</span>
         </div>
         <div class="slide">
-          <img
-            src="images/hero_banner/Brush_cutting_before.jpg"
-            alt="Before Brush cutting"
-          />
+          <img data-src="images/hero_banner/Brush_cutting_before.jpg" alt="Before Brush cutting" />
           <span class="hero-caption">Before Brush Cutting</span>
         </div>
         <div class="slide">
-          <img
-            src="images/hero_banner/brush_cutting_after.jpg"
-            alt="After brush cutting"
-          />
+          <img data-src="images/hero_banner/brush_cutting_after.jpg" alt="After brush cutting" />
           <span class="hero-caption">After Brush Cutting</span>
         </div>
         <div class="slide">
-          <img
-            src="images/hero_banner/Beds_before.jpg"
-            alt="Before shrub bed preparation"
-          />
+          <img data-src="images/hero_banner/Beds_before.jpg" alt="Before shrub bed preparation" />
           <span class="hero-caption">Before Shrub Bed Prep</span>
         </div>
         <div class="slide">
-          <img
-            src="images/hero_banner/Beds_after.jpg"
-            alt="After Shrub bed preparation"
-          />
+          <img data-src="images/hero_banner/Beds_after.jpg" alt="After Shrub bed preparation" />
           <span class="hero-caption">After Shrub Bed Prep</span>
         </div>
         <div class="slide">
-          <img
-            src="images/hero_banner/Sodding_before.jpg"
-            alt="Before Sodding"
-          />
+          <img data-src="images/hero_banner/Sodding_before.jpg" alt="Before Sodding" />
           <span class="hero-caption">Before Sodding</span>
         </div>
         <div class="slide">
-          <img src="images/hero_banner/Sodding_after.jpg" alt="After Sodding" />
+          <img data-src="images/hero_banner/Sodding_after.jpg" alt="After Sodding" />
           <span class="hero-caption">After Sodding</span>
         </div>
         <div class="slide">
-          <img
-            src="images/hero_banner/Grass_cutting_before.jpg"
-            alt="Before Grass cutting"
-          />
+          <img data-src="images/hero_banner/Grass_cutting_before.jpg" alt="Before Grass cutting" />
           <span class="hero-caption">Before Grass Cutting</span>
         </div>
         <div class="slide">
-          <img
-            src="images/hero_banner/Grass_cutting_after.jpg"
-            alt="After grass cutting"
-          />
+          <img data-src="images/hero_banner/Grass_cutting_after.jpg" alt="After grass cutting" />
           <span class="hero-caption">After Grass Cutting</span>
         </div>
         <div class="slide">
-          <img
-            src="images/hero_banner/yard_cleanup_before.jpg"
-            alt="Before yard cleanup"
-          />
+          <img data-src="images/hero_banner/yard_cleanup_before.jpg" alt="Before yard cleanup" />
           <span class="hero-caption">Before Yard Cleanup</span>
         </div>
         <div class="slide">
-          <img
-            src="images/hero_banner/Yard_cleanup_after.jpg"
-            alt="After yard cleanup"
-          />
+          <img data-src="images/hero_banner/Yard_cleanup_after.jpg" alt="After yard cleanup" />
           <span class="hero-caption">After Yard Cleanup</span>
         </div>
         <div class="slide">
-          <img
-            src="images/hero_banner/tree_cutting_before.jpg"
-            alt="Before Tree cutting"
-          />
+          <img data-src="images/hero_banner/tree_cutting_before.jpg" alt="Before Tree cutting" />
           <span class="hero-caption">Before Tree Cutting</span>
         </div>
         <div class="slide">
-          <img
-            src="images/hero_banner/tree_cutting_after.jpg"
-            alt="After tree cutting"
-          />
+          <img data-src="images/hero_banner/tree_cutting_after.jpg" alt="After tree cutting" />
           <span class="hero-caption">After Tree Cutting</span>
         </div>
         <div class="slide">
-          <img
-            src="images/hero_banner/Pruning_before.jpg"
-            alt="Before Pruning"
-          />
+          <img data-src="images/hero_banner/Pruning_before.jpg" alt="Before Pruning" />
           <span class="hero-caption">Before Pruning</span>
         </div>
         <div class="slide">
-          <img src="images/hero_banner/Pruning_after.jpg" alt="After Pruning" />
+          <img data-src="images/hero_banner/Pruning_after.jpg" alt="After Pruning" />
           <span class="hero-caption">After Pruning</span>
         </div>
         <!-- Carousel Navigation Arrows -->
@@ -364,21 +324,19 @@
           aria-label="Previous slide"
           type="button"
         >
-          <i class="bi bi-chevron-left"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" /></svg>
         </button>
         <button
           class="carousel-arrow carousel-arrow-next"
           aria-label="Next slide"
           type="button"
         >
-          <i class="bi bi-chevron-right"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" /></svg>
         </button>
         <div class="hero-text">
           <h1>Green. Clean. Done.</h1>
           <p>Personalized landscaping - we go the extra yard</p>
-          <a href="contact-us.html">
-            <button>Contact Us</button>
-          </a>
+          <a href="contact-us.html" class="hero-cta">Contact Us</a>
         </div>
       </div>
     </div>
@@ -713,7 +671,7 @@
             stuff? We love it!
           </p>
           <a href="services.html#brush-clearing-section" class="learn-more-link"
-            >Learn more</a
+            >Learn more<span class="visually-hidden"> about Brush Clearing</span></a
           >
         </div>
         <div class="key-service-card">
@@ -729,7 +687,7 @@
             limbs (up to about 10' up), larger trees if can fall safely
           </p>
           <a href="services.html#tree-cutting-section" class="learn-more-link"
-            >Learn more</a
+            >Learn more<span class="visually-hidden"> about Tree Cutting</span></a
           >
         </div>
         <div class="key-service-card">
@@ -742,7 +700,7 @@
             shaping bushes and small trees
           </p>
           <a href="services.html#pruning-section" class="learn-more-link"
-            >Learn more</a
+            >Learn more<span class="visually-hidden"> about Pruning</span></a
           >
         </div>
         <div class="key-service-card">
@@ -760,7 +718,7 @@
           <a
             href="services.html#sodding-seeding-section"
             class="learn-more-link"
-            >Learn more</a
+            >Learn more<span class="visually-hidden"> about Sodding/Seeding</span></a
           >
         </div>
         <!-- Row 2 -->
@@ -777,7 +735,7 @@
             REMOVAL
           </p>
           <a href="services.html#flower-shrubs-section" class="learn-more-link"
-            >Learn more</a
+            >Learn more<span class="visually-hidden"> about Flower/Shrub Beds</span></a
           >
         </div>
         <div class="key-service-card">
@@ -790,7 +748,7 @@
           <h3>Grass Cutting</h3>
           <p>Including TALL (3 - 4 feet) grass</p>
           <a href="services.html#grass-cutting-section" class="learn-more-link"
-            >Learn more</a
+            >Learn more<span class="visually-hidden"> about Grass Cutting</span></a
           >
         </div>
         <div class="key-service-card">
@@ -806,7 +764,7 @@
             away if there's a large amount
           </p>
           <a href="services.html#leaf-cleanup-section" class="learn-more-link"
-            >Learn more</a
+            >Learn more<span class="visually-hidden"> about Leaf Cleanup</span></a
           >
         </div>
         <div class="key-service-card">
@@ -822,7 +780,7 @@
             transformation
           </p>
           <a href="services.html#yard-cleanup-section" class="learn-more-link"
-            >Learn more</a
+            >Learn more<span class="visually-hidden"> about General Yard Cleanup</span></a
           >
         </div>
       </div>
@@ -841,7 +799,7 @@
       <div class="service-groups">
         <div class="service-offering">
           <a href="services.html#demolition-section">
-            <img src="images/icons/1x/demolitionAsset 5_1.png" />
+            <img src="images/icons/1x/demolitionAsset 5_1.png"alt="Demolition" />
           </a>
           <h3>Demolition</h3>
           <p>
@@ -850,71 +808,71 @@
             wallpaper removal, carpet removal, hard flooring removal, drywall
             removal, basement stud removal
           </p>
-          <a href="services.html#demolition-section">Learn more</a>
+          <a href="services.html#demolition-section">Learn more<span class="visually-hidden"> about Demolition</span></a>
         </div>
         <div class="service-offering">
           <a href="services.html#junk-sorting-section">
-            <img src="images/icons/1x/Junk sortingAsset 9_1.png" />
+            <img src="images/icons/1x/Junk sortingAsset 9_1.png"alt="Junk sorting, recycling and disposal" />
           </a>
           <h3>Junk Sorting / Recycling / Disposal</h3>
           <p>Outdoor and indoor</p>
-          <a href="services.html#junk-sorting-section">Learn more</a>
+          <a href="services.html#junk-sorting-section">Learn more<span class="visually-hidden"> about Junk Sorting/Recycling/Disposal</span></a>
         </div>
         <div class="service-offering">
           <a href="services.html#painting-section">
-            <img src="images/icons/1x/PaintingAsset 11_1.png" />
+            <img src="images/icons/1x/PaintingAsset 11_1.png"alt="Painting" />
           </a>
           <h3>Painting</h3>
           <p>
             Outside walls & structures; Inside surfaces (walls, trim, ceilings)
           </p>
-          <a href="services.html#painting-section">Learn more</a>
+          <a href="services.html#painting-section">Learn more<span class="visually-hidden"> about Painting</span></a>
         </div>
         <div class="service-offering">
           <a href="services.html#snow-clearing-section">
-            <img src="images/icons/1x/Snow ClearingAsset 12.png" />
+            <img src="images/icons/1x/Snow ClearingAsset 12.png"alt="Snow clearing" />
           </a>
           <h3>Snow Clearing</h3>
           <p>Sidewalks, driveways and small parking lots</p>
-          <a href="services.html#snow-clearing-section">Learn more</a>
+          <a href="services.html#snow-clearing-section">Learn more<span class="visually-hidden"> about Snow Clearing</span></a>
         </div>
       </div>
       <!-- End of service group 1 -->
       <div class="service-groups">
         <div class="service-offering">
           <a href="services.html#hydro-digs-section">
-            <img src="images/icons/1x/Hydro connection digAsset 1_white.png" />
+            <img src="images/icons/1x/Hydro connection digAsset 1_white.png"alt="Hydro connection location digs" />
           </a>
           <h3>Hydro Connection Location Digs</h3>
           <p>
             Digging to find where buried cables going to the house join to the
             main utility supply lines - these must be hand dug
           </p>
-          <a href="services.html#hydro-digs-section">Learn more</a>
+          <a href="services.html#hydro-digs-section">Learn more<span class="visually-hidden"> about Hydro Connection Location Digs</span></a>
         </div>
         <div class="service-offering">
           <a href="services.html#hardwood-flooring-section">
-            <img src="images/icons/1x/Hardwood floorAsset_white.png" />
+            <img src="images/icons/1x/Hardwood floorAsset_white.png"alt="Hardwood floor refinishing" />
           </a>
           <h3>Hardwood Floor Refinishing</h3>
           <p>Includes sanding old floor and application of polyurethane</p>
-          <a href="services.html#hardwood-flooring-section">Learn more</a>
+          <a href="services.html#hardwood-flooring-section">Learn more<span class="visually-hidden"> about Hardwood Floor Refinishing</span></a>
         </div>
         <div class="service-offering">
           <a href="services.html#cleaning-section">
-            <img src="images/icons/1x/Cleaning icon_white.png" />
+            <img src="images/icons/1x/Cleaning icon_white.png"alt="Cleaning" />
           </a>
           <h3>Cleaning</h3>
           <p>Especially particularly dirty situations</p>
-          <a href="services.html#cleaning-section">Learn more</a>
+          <a href="services.html#cleaning-section">Learn more<span class="visually-hidden"> about Cleaning</span></a>
         </div>
         <div class="service-offering">
           <a href="services.html#handyman-repairs-section">
-            <img src="images/icons/Handyman icon_white.png" />
+            <img src="images/icons/Handyman icon_white.png"alt="Other handyman repairs" />
           </a>
           <h3>Other Handyman Repairs</h3>
           <p>Just ask to see if we can do what you have in mind</p>
-          <a href="services.html#handyman-repairs-section">Learn more</a>
+          <a href="services.html#handyman-repairs-section">Learn more<span class="visually-hidden"> about Other Handyman Repairs</span></a>
         </div>
       </div>
       <!-- End of service group 2 -->
@@ -922,7 +880,7 @@
     <!-- Learn More Service button below -->
     <div class="service-button">
       <a href="services.html">
-        <button type="button"><span>Learn more</span></button>
+        <button type="button"><span>Learn more<span class="visually-hidden"> about all our services</span></span></button>
       </a>
     </div>
     <!-- <div class="testimonials">
@@ -967,16 +925,24 @@
         <div class="social-icons">
           <a
             href="https://www.facebook.com/loewenpropertyworks"
-            class="fa fa-facebook"
             target="_blank"
             rel="noopener noreferrer"
-          ></a>
+            aria-label="Loewen Property Works on Facebook"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+            </svg>
+          </a>
           <a
             href="https://www.linkedin.com/in/robloewen/"
-            class="fa fa-linkedin"
             target="_blank"
             rel="noopener noreferrer"
-          ></a>
+            aria-label="Rob Loewen on LinkedIn"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+            </svg>
+          </a>
         </div>
         <div class="footer-text">
           <p>Phone: +15195882264</p>
@@ -1012,6 +978,49 @@
       const intervalTime = 5000;
       let autoPlayInterval;
 
+      // Only the first slide's image is in the HTML as a real src, so it
+      // downloads first with nothing competing for bandwidth. The other 15
+      // carry data-src and are fetched one after another, in viewing order,
+      // as soon as the first has arrived (see preloadInOrder below).
+      function loadSlide(index) {
+        const slide = slides[(index + slides.length) % slides.length];
+        slide.querySelectorAll("source[data-srcset]").forEach((source) => {
+          source.srcset = source.dataset.srcset;
+          source.removeAttribute("data-srcset");
+        });
+        slide.querySelectorAll("img[data-src]").forEach((img) => {
+          img.src = img.dataset.src;
+          img.removeAttribute("data-src");
+        });
+      }
+
+      // Download the remaining slides one at a time in the order they will be
+      // shown, each starting when the previous one finishes (or fails), so
+      // they never compete with each other or with the first photo.
+      function preloadInOrder(index) {
+        if (index >= slides.length) return;
+        const img = slides[index].querySelector("img");
+        loadSlide(index);
+        if (!img || img.complete) {
+          preloadInOrder(index + 1);
+          return;
+        }
+        const next = () => preloadInOrder(index + 1);
+        img.addEventListener("load", next, { once: true });
+        img.addEventListener("error", next, { once: true });
+      }
+
+      // Start the chain the moment the first photo is in, without waiting for
+      // the rest of the page or for any user activity.
+      const firstImg = slides[0].querySelector("img");
+      if (!firstImg || firstImg.complete) {
+        preloadInOrder(1);
+      } else {
+        const startChain = () => preloadInOrder(1);
+        firstImg.addEventListener("load", startChain, { once: true });
+        firstImg.addEventListener("error", startChain, { once: true });
+      }
+
       // Navigate to specific slide
       function goToSlide(index) {
         // Deactivate current slide
@@ -1025,6 +1034,10 @@
         } else if (currentIndex >= slides.length) {
           currentIndex = 0;
         }
+
+        // Make sure this slide's image is requested, and prefetch the next one
+        loadSlide(currentIndex);
+        loadSlide(currentIndex + 1);
 
         // Activate the new slide
         slides[currentIndex].classList.add("active");
@@ -1041,28 +1054,69 @@
         goToSlide(currentIndex - 1);
       }
 
-      // Start auto-play
-      function startAutoPlay() {
-        if (autoPlayInterval) clearInterval(autoPlayInterval);
-        autoPlayInterval = setInterval(nextSlide, intervalTime);
+      // Auto-play runs on a one-shot timer so a hold can pause it and resume
+      // with exactly the time that was left (keeping it in step with the
+      // 5s zoom transition).
+      let isHeld = false;
+      let slideStartedAt = 0;
+      let remainingTime = intervalTime;
+
+      function scheduleNext(delay) {
+        clearTimeout(autoPlayInterval);
+        remainingTime = delay;
+        slideStartedAt = performance.now();
+        autoPlayInterval = setTimeout(() => {
+          nextSlide();
+          scheduleNext(intervalTime);
+        }, delay);
       }
 
-      // Stop auto-play
-      function stopAutoPlay() {
-        if (autoPlayInterval) {
-          clearInterval(autoPlayInterval);
-          autoPlayInterval = null;
-        }
+      // Start auto-play
+      function startAutoPlay() {
+        scheduleNext(intervalTime);
       }
 
       // Reset auto-play timer after user interaction
       function resetAutoPlay() {
-        stopAutoPlay();
-        startAutoPlay();
+        if (isHeld) {
+          // Slide changed during a hold (e.g. arrow key): give it a full
+          // turn once released.
+          remainingTime = intervalTime;
+          return;
+        }
+        scheduleNext(intervalTime);
+      }
+
+      // Hold-to-pause: freeze the timer and every running fade/zoom on the
+      // current frame, then carry on from that frame on release.
+      function holdSlideshow() {
+        if (isHeld) return;
+        isHeld = true;
+        clearTimeout(autoPlayInterval);
+        remainingTime = Math.max(
+          0,
+          remainingTime - (performance.now() - slideStartedAt),
+        );
+        slides.forEach((slide) =>
+          slide.getAnimations().forEach((anim) => anim.pause()),
+        );
+      }
+
+      function releaseSlideshow() {
+        if (!isHeld) return;
+        isHeld = false;
+        slides.forEach((slide) =>
+          slide.getAnimations().forEach((anim) => anim.play()),
+        );
+        scheduleNext(remainingTime);
       }
 
       // Initialize the slider
       slides[0].classList.add("active");
+      // Commit scale(1) as the starting frame before zooming; otherwise the
+      // browser sees scale(1.1) as the initial value and skips the transition.
+      slides[0].style.transform = "scale(1)";
+      getComputedStyle(slides[0]).transform;
       slides[0].style.transform = "scale(1.1)";
       startAutoPlay();
 
@@ -1081,11 +1135,28 @@
         });
       }
 
-      // Pause on hover over the hero area
+      // Press and hold anywhere on the hero (mouse button or finger) to
+      // pause; release to resume. Buttons and links are excluded.
       const heroImage = document.querySelector(".hero-image");
+      let lastPointerType = "mouse";
       if (heroImage) {
-        heroImage.addEventListener("mouseenter", stopAutoPlay);
-        heroImage.addEventListener("mouseleave", startAutoPlay);
+        heroImage.addEventListener("pointerdown", (e) => {
+          lastPointerType = e.pointerType;
+          if (e.button !== 0) return;
+          if (e.target.closest("a, button")) return;
+          holdSlideshow();
+        });
+        // Release can happen outside the hero; scrolling on touch fires
+        // pointercancel, which also resumes.
+        window.addEventListener("pointerup", releaseSlideshow);
+        window.addEventListener("pointercancel", releaseSlideshow);
+        window.addEventListener("blur", releaseSlideshow);
+        // Stop native image dragging (it would cancel the hold on desktop)
+        heroImage.addEventListener("dragstart", (e) => e.preventDefault());
+        // Suppress the long-press "Save image" menu on touch only
+        heroImage.addEventListener("contextmenu", (e) => {
+          if (lastPointerType === "touch") e.preventDefault();
+        });
       }
 
       // Keyboard navigation support
