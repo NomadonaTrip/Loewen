@@ -1,8 +1,20 @@
-/* Font import */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Poppins is loaded with <link rel="preconnect"> + <link rel="stylesheet"> in
+   each page's <head> (only the weights used below), not @import: an @import
+   can't start until this file has downloaded, which delayed first paint. */
 
-/* Bootstrap icons import */
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+/* Text for screen readers and crawlers only, e.g. the service name after each
+   "Learn more" so the link makes sense out of context. */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 html,
 body {
@@ -300,6 +312,10 @@ ul button:hover {
     transform 5s ease-in-out; /* Fade and scale transitions */
   transform-origin: center;
   z-index: 1; /* Ensure images are stacked */
+  /* Press-and-hold pauses the slideshow: no text selection or iOS callout */
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .slide img {
@@ -317,7 +333,10 @@ ul button:hover {
   text-align: center;
   padding: 0 20px;
 }
-.hero-text button {
+.hero-text .hero-cta {
+  display: inline-block;
+  text-decoration: none;
+  line-height: normal;
   background-color: var(--accent-green);
   color: var(--text-light);
   font-family: var(--font-heading);
@@ -332,7 +351,7 @@ ul button:hover {
   width: auto;
   height: auto;
 }
-.hero-text button:hover {
+.hero-text .hero-cta:hover {
   background-color: transparent;
   color: var(--text-light);
   border: 1px solid white;
@@ -379,6 +398,12 @@ ul button:hover {
 /* ================================
    Hero Carousel Navigation Arrows
    ================================ */
+/* Inline SVG chevrons: the global button padding leaves almost no content
+   width, so stop the icon from being flex-shrunk to 0. */
+.carousel-arrow svg {
+  flex-shrink: 0;
+}
+
 .carousel-arrow {
   position: absolute;
   top: 50%;
@@ -561,7 +586,7 @@ p {
 .Professional p,
 .Trustworthy p,
 .request p {
-  color: var(--text-green);
+  color: #3b6a5d; /* darker than --text-green for 4.5:1 contrast on cream */
   font-family: var(--font-heading);
   font-size: 14px;
   line-height: 1.6;
@@ -1162,26 +1187,44 @@ button:hover {
 .carousel-indicators {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 0; /* the 24px buttons already space the dots 24px apart, as before */
   margin-top: 36px;
 }
 
+/* The button is a 24x24 touch target (WCAG 2.5.8); the visible dot is drawn
+   by ::before at --dot size, so the look is unchanged. */
 .carousel-indicators .indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+  --dot: 12px;
+  position: relative;
+  width: 24px;
+  height: 24px;
   border: none;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: transparent;
   cursor: pointer;
   padding: 0;
+}
+
+.carousel-indicators .indicator::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: var(--dot);
+  height: var(--dot);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease;
 }
 
 .carousel-indicators .indicator:hover {
+  background-color: transparent;
+}
+
+.carousel-indicators .indicator:hover::before {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.carousel-indicators .indicator.active {
+.carousel-indicators .indicator.active::before {
   background-color: var(--accent-green);
   transform: scale(1.2);
 }
@@ -1244,8 +1287,7 @@ button:hover {
   }
 
   .carousel-indicators .indicator {
-    width: 10px;
-    height: 10px;
+    --dot: 10px;
   }
 }
 
@@ -1291,12 +1333,10 @@ button:hover {
 
   .carousel-indicators {
     margin-top: 20px;
-    gap: 10px;
   }
 
   .carousel-indicators .indicator {
-    width: 8px;
-    height: 8px;
+    --dot: 8px;
   }
 }
 
@@ -2871,7 +2911,7 @@ form button:hover {
     font-size: 0.875rem;
   }
 
-  .hero-text button {
+  .hero-text .hero-cta {
     padding: 10px 20px;
     font-size: 0.875rem;
   }
