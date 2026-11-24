@@ -100,7 +100,7 @@
     <meta name="apple-mobile-web-app-title" content="LPW" />
     <link rel="manifest" href="/images/logo/site.webmanifest" />
     <!-- site external css styling  -->
-    <link rel="stylesheet" href="styles.css?v=20261111" />
+    <link rel="stylesheet" href="styles.css?v=20261124" />
     <title>
       Property Care & Landscaping Services in Kitchener-Waterloo | Loewen
       Property Works
@@ -228,7 +228,21 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about-us.html">About Us</a></li>
-          <li><a href="services.html">Our Services</a></li>
+          <li class="nav-dropdown">
+            <a href="services.html">Our Services</a>
+            <button
+              type="button"
+              class="nav-dropdown-toggle"
+              aria-expanded="false"
+              aria-controls="services-menu"
+              aria-label="Show service pages"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" /></svg>
+            </button>
+            <ul class="nav-submenu" id="services-menu">
+              <li><a href="windrow-clearing-modern.html">Windrow Clearing</a></li>
+            </ul>
+          </li>
           <li><a href="products.html">Products</a></li>
           <li class="nav-contact-item"><a href="contact-us.html">Contact Us</a></li>
           <li>
@@ -1375,6 +1389,6 @@
       })();
     </script>
     <!-- External JS controlling the header behavior -->
-    <script src="js/script.js?v=20261111"></script>
+    <script src="js/script.js?v=20261123"></script>
   </body>
 </html>

@@ -168,7 +168,7 @@ body {
   /* the navbar's own padding now sets the right edge (1200px column) */
   margin-right: 0;
 }
-.nav-links ul {
+.nav-links > ul {
   display: flex;
   gap: var(--spacing-unit);
   font-weight: 400;
@@ -177,7 +177,7 @@ body {
   padding: 0;
   align-items: center;
 }
-.nav-links ul li {
+.nav-links > ul > li {
   display: flex;
   align-items: center;
 }
@@ -206,7 +206,7 @@ body {
   }
 }
 @media screen and (min-width: 769px) and (max-width: 900px) {
-  .nav-links ul {
+  .nav-links > ul {
     gap: 4px;
   }
 }
@@ -230,7 +230,7 @@ body {
 /* js/script.js adds .active to every nav link whose href matches the current
    page. On contact-us.html that also catches the CTA wrapper, painting a cream
    ring around the button. The CTA carries its own styling, so opt it out. */
-.nav-links ul li:last-child a.active {
+.nav-links > ul > li:last-child a.active {
   background-color: transparent;
   color: var(--text-cream);
   padding-left: 0.5rem;
@@ -241,30 +241,30 @@ body {
    The wrapper must stay transparent — otherwise the generic rules below hand
    the black fill off from the button (138x45) to its larger wrapper <a>
    (154x61), a 1.5x jump in painted area that reads as the button resizing. */
-.nav-links ul li:last-child a:hover {
+.nav-links > ul > li:last-child a:hover {
   background-color: transparent;
 }
-.nav-links ul li:last-child button {
+.nav-links > ul > li:last-child button {
   /* transparent at rest so the hover border adds no layout shift */
   border: 1px solid transparent;
   transition:
     border-color var(--animation-timing),
     background-color var(--animation-timing);
 }
-.nav-links ul li:last-child button:hover {
+.nav-links > ul > li:last-child button:hover {
   background-color: var(--primary-dark);
   border: 1px solid var(--text-light);
 }
 
 /* The phone icon spins on hover, easing in and out both ways. */
-.nav-links ul li:last-child button svg {
+.nav-links > ul > li:last-child button svg {
   display: inline-block;
   vertical-align: middle;
   transform: rotate(0deg);
   transform-origin: center;
   transition: transform 300ms ease-in-out;
 }
-.nav-links ul li:last-child button:hover svg {
+.nav-links > ul > li:last-child button:hover svg {
   transform: rotate(360deg);
 }
 
@@ -2521,7 +2521,7 @@ form button:hover {
   }
 
   /* Hide the CTA button in the mobile menu */
-  .nav-links ul li:last-child {
+  .nav-links > ul > li:last-child {
     display: none;
   }
 
@@ -2544,13 +2544,13 @@ form button:hover {
     right: 0;
   }
 
-  .nav-links ul {
+  .nav-links > ul {
     flex-direction: column;
     gap: 0;
     width: 100%;
   }
 
-  .nav-links ul li {
+  .nav-links > ul > li {
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
@@ -3647,4 +3647,825 @@ form button:hover {
     padding: 12px 28px;
     font-size: 0.9rem;
   }
+}
+
+/* ==========================================================================
+   Nav: "Our Services" dropdown
+   The parent link still goes to services.html; the chevron button beside it
+   opens the submenu. Add future service pages as more <li> in .nav-submenu.
+   ========================================================================== */
+.nav-dropdown {
+  position: relative;
+}
+.nav-links .nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 44px;
+  margin-left: -6px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text-cream);
+  cursor: pointer;
+}
+.nav-links .nav-dropdown-toggle:hover {
+  background: transparent;
+  border: 0;
+  color: var(--text-light);
+}
+.nav-links .nav-dropdown-toggle:focus-visible,
+.nav-submenu a:focus-visible {
+  outline: 2px solid var(--text-cream);
+  outline-offset: 2px;
+}
+.nav-dropdown-toggle svg {
+  transition: transform var(--animation-timing);
+}
+.nav-dropdown-toggle[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+.nav-submenu {
+  position: absolute;
+  /* drop the menu to the navbar's bottom edge (70px bar, ~40px item) */
+  top: calc(100% + 13px);
+  left: 0;
+  min-width: 210px;
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+  background: var(--secondary-dark);
+  border-top: 2px solid var(--text-green);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition:
+    opacity 200ms ease-out,
+    transform 200ms ease-out,
+    visibility 200ms;
+  z-index: 102;
+}
+/* invisible bridge so the pointer can travel from the item to the menu */
+.nav-submenu::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -15px;
+  height: 15px;
+}
+.nav-submenu a {
+  display: block;
+  padding: 12px 18px;
+}
+.nav-dropdown:hover .nav-submenu,
+html:not(.js-nav) .nav-dropdown:focus-within .nav-submenu,
+.nav-dropdown-toggle[aria-expanded="true"] + .nav-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links > ul > li.nav-dropdown {
+    flex-wrap: wrap;
+  }
+  .nav-dropdown > a {
+    flex: 1;
+  }
+  .nav-links .nav-dropdown-toggle {
+    width: 56px;
+    height: 56px;
+    margin: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .nav-submenu {
+    position: static;
+    display: none;
+    flex-basis: 100%;
+    min-width: 0;
+    padding: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: none;
+  }
+  .nav-submenu::before {
+    content: none;
+  }
+  .nav-dropdown-toggle[aria-expanded="true"] + .nav-submenu {
+    display: block;
+  }
+  .nav-links .nav-submenu a {
+    padding: 16px 24px 16px 40px;
+  }
+}
+
+/* ==========================================================================
+   Windrow clearing landing page + booking confirmation
+   Built from the home page's own parts: black bands, centred Poppins
+   headings, pill buttons, cream "Why They Choose Us" cards and the green
+   "Key Services" band. The one page-specific touch is the snow ridge that
+   edges the hero photo.
+   ========================================================================== */
+.windrow {
+  width: 100%;
+  color: var(--text-light);
+  font-family: var(--font-heading);
+}
+.windrow h1,
+.windrow h2,
+.windrow h3,
+.windrow h4 {
+  font-family: var(--font-heading);
+  margin: 0;
+  text-wrap: balance;
+}
+.windrow p,
+.windrow li,
+.windrow summary {
+  font-family: var(--font-heading);
+}
+.windrow p {
+  margin: 0 0 1em;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.wr-wrap,
+.windrow-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-unit);
+  box-sizing: border-box;
+}
+.wr-band {
+  position: relative;
+  padding: 72px 0;
+  background: var(--primary-dark);
+}
+/* Section headings: same as "Why They Choose Us" / "What Our Customers Say" */
+.wr-band h2 {
+  margin: 0 auto 24px;
+  max-width: 26ch;
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text-light);
+}
+.wr-center {
+  text-align: center;
+}
+.wr-center p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60ch;
+}
+.windrow a:not(.windrow-btn) {
+  color: var(--text-cream);
+  text-underline-offset: 3px;
+}
+.windrow a:focus-visible {
+  outline: 2px solid var(--text-cream);
+  outline-offset: 3px;
+}
+
+/* Buttons: the site's pill. Cream on dark (home "Learn more about all our
+   services"), green over photos (home hero "Contact Us"). */
+.windrow-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: calc(0.667em + 2px) calc(1.6em + 2px);
+  box-sizing: border-box;
+  background-color: var(--text-cream);
+  color: var(--accent-green);
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--animation-timing);
+}
+.windrow-btn:hover {
+  background-color: transparent;
+  color: var(--text-cream);
+  border-color: var(--text-cream);
+}
+.windrow-btn:focus-visible {
+  outline: 2px solid var(--text-cream);
+  outline-offset: 3px;
+}
+.windrow-cta-row {
+  margin-top: 32px;
+}
+.windrow-cta-note {
+  margin-top: 16px !important;
+  font-size: 0.9375rem !important;
+  color: var(--text-cream) !important;
+}
+
+/* Placeholder for policies LPW still has to confirm */
+.todo {
+  background: #ffe08a;
+  color: #1a1a1a;
+  padding: 0 0.3em;
+  font-weight: 600;
+  font-size: 0.9em;
+  border: 1px dashed #1a1a1a;
+}
+
+/* ---- Hero: laid out like the home hero ---------------------------------- */
+.wr-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100svh;
+  padding: 110px 0 clamp(80px, 12vw, 150px);
+  box-sizing: border-box;
+  overflow: hidden;
+  background: var(--primary-dark);
+  text-align: center;
+}
+.wr-hero > img {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% 60%;
+}
+.wr-hero::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 45%),
+    rgba(0, 0, 0, 0.42);
+}
+.wr-hero .wr-wrap {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+.wr-hero h1 {
+  margin: 0 auto 16px;
+  max-width: 20ch;
+  font-size: clamp(2.25rem, 6.4vw, 3.625rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--text-light);
+}
+.wr-hero h1 span {
+  display: block;
+}
+.wr-hero-lede {
+  margin: 0 auto 12px !important;
+  max-width: 34ch !important;
+  font-size: clamp(1.0625rem, 2.4vw, 1.25rem) !important;
+  line-height: 1.5 !important;
+  color: var(--text-light) !important;
+  text-wrap: balance;
+}
+.wr-hero-price {
+  margin: 0 !important;
+  font-size: 1.125rem !important;
+  font-weight: 600;
+  color: var(--text-cream) !important;
+}
+.wr-hero .windrow-btn {
+  margin-top: var(--spacing-unit);
+  background-color: var(--accent-green);
+  color: var(--text-light);
+}
+.wr-hero .windrow-btn:hover {
+  background-color: transparent;
+  color: var(--text-light);
+  border-color: var(--text-light);
+}
+/* Service area: three map-pinned cities across the hero */
+.wr-hero-area {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 32px;
+  max-width: 640px;
+  margin: 40px auto 0;
+  padding: 18px 0 0;
+  list-style: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.wr-hero-area li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: clamp(0.9375rem, 2vw, 1.125rem);
+  font-weight: 500;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+.wr-pin {
+  flex-shrink: 0;
+  width: 1.1em;
+  height: 1.1em;
+  color: var(--text-cream);
+}
+/* The windrow: a ragged ridge of snow along the bottom of the photo */
+.wr-ridge {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  z-index: 3;
+  width: 100%;
+  height: clamp(36px, 7vw, 96px);
+  display: block;
+  fill: var(--primary-dark);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .wr-hero-copy > * {
+    animation: wr-settle 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .wr-hero-copy > :nth-child(2) { animation-delay: 90ms; }
+  .wr-hero-copy > :nth-child(3) { animation-delay: 160ms; }
+  .wr-hero-copy > :nth-child(4) { animation-delay: 230ms; }
+  .wr-hero-area { animation: wr-settle 700ms cubic-bezier(0.2, 0.7, 0.2, 1) 320ms both; }
+  @keyframes wr-settle {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+  }
+}
+
+/* ---- Problem ------------------------------------------------------------- */
+.wr-problem {
+  padding-top: 48px;
+}
+.wr-prose p {
+  font-size: 1.0625rem;
+}
+.wr-staccato {
+  font-size: clamp(1.1875rem, 3vw, 1.375rem) !important;
+  font-weight: 500;
+  line-height: 1.5 !important;
+  color: var(--text-cream) !important;
+}
+
+/* "Sound familiar?": the home page's "Why They Choose Us" cards */
+.wr-familiar {
+  margin-top: 64px;
+  text-align: center;
+}
+.wr-familiar h3 {
+  margin-bottom: 40px;
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  font-weight: 600;
+  color: var(--text-light);
+}
+.wr-moments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-unit);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wr-moment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+  padding: var(--spacing-unit);
+  box-sizing: border-box;
+  background-color: var(--text-cream);
+  color: var(--secondary-dark);
+  text-align: center;
+}
+.wr-moment-art {
+  width: 120px;
+  margin-bottom: 16px;
+}
+.wr-moment-art svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.windrow .wr-moment h4 {
+  margin-bottom: 12px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--secondary-dark);
+}
+.windrow .wr-moment p {
+  margin-bottom: 8px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #3b6a5d; /* the home cards' green, 4.5:1+ on cream */
+}
+.wr-moment-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: auto;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+.windrow .wr-moment .wr-moment-link {
+  color: var(--accent-green);
+}
+.windrow .wr-moment .wr-moment-link:hover {
+  color: var(--secondary-dark);
+}
+.wr-moment .wr-moment-link:focus-visible {
+  outline-color: var(--accent-green);
+}
+/* the little driveway scenes, in the site's charcoal, green and cream */
+.wr-roof,
+.wr-door,
+.wr-road {
+  fill: var(--secondary-dark);
+}
+.wr-wall {
+  fill: #fff;
+  stroke: var(--secondary-dark);
+  stroke-width: 2.5;
+}
+.wr-win {
+  fill: var(--text-green);
+}
+.wr-drive {
+  fill: #d9cfb4;
+}
+.wr-drive.is-shovelled {
+  fill: #6b7075;
+}
+.wr-mound {
+  fill: #fff;
+  stroke: var(--secondary-dark);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+.wr-chunk {
+  fill: none;
+  stroke: var(--secondary-dark);
+  stroke-width: 1.8;
+}
+.wr-badge > circle {
+  fill: var(--accent-green);
+}
+
+/* ---- Solution ------------------------------------------------------------ */
+.wr-lead {
+  font-size: 1.125rem !important;
+}
+.wr-nos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 28px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.wr-nos li {
+  font-size: clamp(1.25rem, 3.6vw, 1.625rem);
+  font-weight: 600;
+  color: var(--text-cream);
+}
+
+/* ---- How it works: the home page's "Key Services" band ------------------- */
+.wr-feature {
+  padding: 100px 0;
+  overflow: hidden;
+  background: linear-gradient(165deg, #0d2818 0%, #183d3d 35%, #1a4a3a 65%, #0f3028 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 100px, black calc(100% - 100px), transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 100px, black calc(100% - 100px), transparent 100%);
+}
+.wr-feature::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+}
+.wr-feature .wr-wrap {
+  position: relative;
+}
+.wr-feature h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin: 20px auto 0;
+  background: linear-gradient(90deg, transparent, var(--text-cream), transparent);
+}
+.windrow-steps-title {
+  margin: 0 auto 48px;
+  font-size: 1.125rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: rgba(245, 236, 213, 0.9);
+}
+.windrow-steps {
+  display: grid;
+  gap: var(--spacing-unit);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+  text-align: center;
+}
+.windrow-steps li {
+  counter-increment: step;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 24px 28px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.03) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+.windrow-steps li::before {
+  content: counter(step);
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: var(--text-cream);
+  color: var(--accent-green);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.windrow-steps strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-light);
+}
+.wr-cta-after-steps {
+  margin-top: 48px;
+}
+
+/* ---- Pricing ------------------------------------------------------------- */
+.wr-pricing h2 {
+  max-width: none;
+  font-weight: 500;
+}
+.wr-price-figure {
+  display: block;
+  margin-bottom: 12px;
+  white-space: nowrap;
+  font-size: clamp(3.5rem, 13vw, 6rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--text-cream);
+}
+.wr-pricing-close {
+  font-size: 1.125rem !important;
+  font-weight: 500;
+  color: var(--text-cream) !important;
+}
+
+/* ---- FAQ ----------------------------------------------------------------- */
+.wr-faq-list {
+  max-width: 820px;
+}
+.windrow-faq details {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.windrow-faq details:first-of-type {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.windrow-faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 60px;
+  padding: 14px 0;
+  cursor: pointer;
+  list-style: none;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--text-cream);
+}
+.windrow-faq summary::-webkit-details-marker {
+  display: none;
+}
+.windrow-faq summary::after {
+  content: "";
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-3px) rotate(45deg);
+  transition: transform var(--animation-timing);
+}
+.windrow-faq details[open] summary::after {
+  transform: translateY(2px) rotate(-135deg);
+}
+.windrow-faq summary:hover {
+  color: var(--text-light);
+}
+.windrow-faq summary:focus-visible {
+  outline: 2px solid var(--text-cream);
+  outline-offset: 4px;
+}
+.windrow-faq details p {
+  max-width: 64ch;
+  padding-bottom: 10px;
+}
+
+/* ---- Closing ------------------------------------------------------------- */
+.windrow-closing {
+  padding-bottom: 96px;
+}
+
+/* ---- Sticky mobile booking bar ------------------------------------------- */
+.windrow-sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 90;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: var(--secondary-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 250ms ease-out,
+    visibility 250ms;
+}
+.windrow-sticky-cta .windrow-btn {
+  width: 100%;
+}
+.windrow-sticky-cta.is-hidden {
+  transform: translateY(110%);
+  visibility: hidden;
+}
+.windrow-page .footer {
+  padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px));
+}
+
+/* ---- Confirmation page --------------------------------------------------- */
+.windrow-booked {
+  padding: 132px 0 80px;
+  background: var(--primary-dark);
+}
+.windrow-booked .windrow-inner {
+  max-width: 760px;
+}
+.windrow-booked h1 {
+  margin-bottom: 24px;
+  /* the site's inner-page title scale: 42 / 32 (<=768) / 28 (<=480) */
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-light);
+}
+.windrow-booked h2 {
+  margin: 36px 0 12px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-cream);
+}
+.windrow-booked p,
+.windrow-booked li {
+  /* site body scale: 16 / 15 (<=768) / 14 (<=480) */
+  font-size: 16px;
+  line-height: 1.6;
+}
+@media screen and (max-width: 768px) {
+  .windrow-booked h1 {
+    font-size: 32px;
+  }
+  .windrow-booked p,
+  .windrow-booked li {
+    font-size: 15px;
+  }
+  .windrow-booked .windrow-btn {
+    font-size: 14.4px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .windrow-booked h1 {
+    font-size: 28px;
+  }
+  .windrow-booked h2 {
+    font-size: 16px;
+  }
+  .windrow-booked p,
+  .windrow-booked li {
+    font-size: 14px;
+  }
+  .windrow-booked .windrow-btn {
+    font-size: 13.6px;
+  }
+}
+.windrow-booked ul {
+  padding-left: 1.25em;
+  margin: 0 0 32px;
+}
+.windrow-booked li {
+  margin-bottom: 8px;
+}
+
+/* ---- Wider screens ------------------------------------------------------- */
+@media screen and (min-width: 769px) {
+  .wr-band {
+    padding: 96px 0;
+  }
+  .wr-problem {
+    padding-top: 56px;
+  }
+  .wr-feature {
+    padding: 120px 0;
+  }
+  .windrow-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .windrow-sticky-cta {
+    display: none;
+  }
+  .windrow-page .footer {
+    padding-bottom: 40px;
+  }
+}
+
+/* ---- Parallax (progressive enhancement) ----------------------------------
+   The hero photo drifts slower than the page; the price heading a little faster.
+   Native scroll-driven animations only: other browsers stay static. */
+@supports ((animation-timeline: view()) and (animation-range: entry)) {
+  @media (prefers-reduced-motion: no-preference) {
+    .wr-hero > img {
+      animation: wr-drift-down linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 100vh;
+    }
+    .wr-pricing {
+      view-timeline: --wr-price;
+    }
+    /* the whole block drifts, so its lines never slide over each other */
+    .wr-pricing .wr-wrap {
+      animation: wr-rise linear both;
+      animation-timeline: --wr-price;
+    }
+    @keyframes wr-drift-down {
+      to {
+        transform: translateY(30%);
+      }
+    }
+    @keyframes wr-rise {
+      from {
+        transform: translateY(40px);
+      }
+      to {
+        transform: translateY(-40px);
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .windrow-sticky-cta,
+  .windrow-btn,
+  .windrow-faq summary::after,
+  .nav-submenu,
+  .nav-dropdown-toggle svg {
+    transition: none;
+  }
+}
+/* payment methods in step 2: one per line */
+.wr-pay {
+  display: block;
+  margin-top: 6px;
+}
+.wr-pay a {
+  overflow-wrap: anywhere;
 }

@@ -1,0 +1,699 @@
+/* ==========================================================================
+   Windrow clearing landing page (windrow-clearing.html only)
+   Road vernacular: snowbank white, asphalt, plow-beacon amber, and Overpass
+   (a descendant of the Highway Gothic road-sign lettering). The one bold
+   moment is the hero's before/after strip, where "after" wipes in once.
+   The shared navbar and footer keep their styles from styles.css.
+   ========================================================================== */
+
+.wx,
+.wx-sticky {
+  --snow: #eef2f4;
+  --white: #ffffff;
+  --asphalt: #1e2326;
+  --slush: #5b656a;
+  --rule: #c9d1d5;
+  --amber: #f5a623;
+  --gutter: clamp(20px, 4vw, 56px);
+  --measure: 1320px;
+  --nav: 70px;
+}
+.wx {
+  display: block;
+  width: 100%;
+  background: var(--snow);
+  color: var(--asphalt);
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 16px; /* site body scale: 16 / 15 / 14 */;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+.wx *,
+.wx *::before,
+.wx *::after,
+.wx-sticky,
+.wx-sticky * {
+  box-sizing: border-box;
+}
+/* Resets use :where() (zero specificity) so every class rule below wins,
+   while still beating styles.css's bare element rules (loaded earlier). */
+:where(.wx) :is(h1, h2, h3, p, ul, ol) {
+  margin: 0;
+}
+:where(.wx) :is(h1, h2, h3) {
+  font-family: inherit;
+  color: inherit;
+  text-wrap: balance;
+}
+:where(.wx) p {
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  text-wrap: pretty;
+}
+:where(.wx) :is(ul, ol) {
+  padding: 0;
+  list-style: none;
+}
+.wx a {
+  color: inherit;
+}
+.wx :focus-visible {
+  outline: 3px solid var(--amber);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.wx-wrap {
+  width: 100%;
+  max-width: none;
+  margin-inline: auto;
+  padding-inline: max(24px, calc((100% - 1200px) / 2)); /* site column, navbar gutters */
+}
+.wx-section {
+  padding-block: clamp(72px, 10vw, 140px);
+}
+
+/* Section headings share one size; the hero and price are the exceptions. */
+.wx-h2 {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+.wx-lede {
+  max-width: 46ch;
+  font-size: 20px;
+  color: var(--slush);
+}
+
+/* ---- Buttons --------------------------------------------------------------- */
+.wx-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0 30px;
+  border-radius: 999px;
+  background: var(--asphalt);
+  color: var(--white) !important;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.005em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 160ms ease-out, background-color 160ms ease-out;
+}
+.wx-btn:hover {
+  background: #000;
+  transform: translateY(-1px);
+}
+.wx-btn:active {
+  transform: translateY(0);
+}
+.wx-btn--amber {
+  background: var(--amber);
+  color: var(--asphalt) !important;
+}
+.wx-btn--amber:hover {
+  background: #ffb73d;
+}
+
+/* Unconfirmed client details stay visible until filled in. */
+.wx mark.todo {
+  background: #ffe3a3;
+  color: var(--asphalt);
+  padding: 0 4px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* ---- Hero ------------------------------------------------------------------ */
+.wx-hero {
+  padding-top: calc(var(--nav) + clamp(40px, 6vw, 88px));
+  background: var(--snow);
+}
+.wx-hero h1 {
+  font-size: 58px;
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  max-width: 22ch;
+}
+.wx-hero-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 24px 48px;
+  margin-top: clamp(28px, 3.5vw, 48px);
+  padding-bottom: clamp(32px, 4vw, 56px);
+}
+.wx-hero-action {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.wx-hero-price {
+  font-size: 1.25rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* Before/after strip: two photos meeting at an amber seam. */
+.wx-proof {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  background: var(--asphalt);
+  height: clamp(300px, 58vh, 700px);
+}
+/* amber seam between the photos; the unrevealed "after" side stays dark */
+.wx-proof::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 3px);
+  width: 6px;
+  background: var(--amber);
+}
+.wx-proof figure {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  background: var(--asphalt);
+}
+.wx-proof img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* keep the ridge (lower half of the photos) in frame when cropped */
+  object-position: 50% 72%;
+}
+.wx-proof figcaption {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  padding: 6px 14px 4px;
+  border-radius: 999px;
+  background: rgba(30, 35, 38, 0.82);
+  color: var(--white);
+  font-size: 0.9375rem;
+  font-weight: 800;
+}
+.wx-proof .is-after figcaption {
+  background: var(--amber);
+  color: var(--asphalt);
+}
+
+/* The single orchestrated moment: "after" is cleared in from the seam. */
+@media (prefers-reduced-motion: no-preference) {
+  .wx-proof .is-after {
+    animation: wx-clear 1100ms cubic-bezier(0.65, 0, 0.35, 1) 450ms both;
+  }
+  .wx-proof .is-after figcaption {
+    animation: wx-tag 300ms ease-out 1500ms both;
+  }
+}
+@keyframes wx-clear {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes wx-tag {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+.wx-areas-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  padding-block: 22px;
+  font-weight: 800;
+  font-size: 1.0625rem;
+}
+.wx-areas-inline li,
+.wx-cities li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.wx-pin {
+  flex: none;
+  width: 1.1em;
+  height: 1.1em;
+  color: var(--slush);
+}
+
+/* ---- Experience ------------------------------------------------------------ */
+.wx-experience {
+  background: var(--white);
+}
+.wx-split {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(40px, 7vw, 120px);
+  align-items: start;
+}
+.wx-split-intro .wx-lede {
+  margin-top: 24px;
+}
+.wx-split-intro .wx-btn {
+  margin-top: 36px;
+}
+.wx-facts {
+  border-top: 2px solid var(--asphalt);
+}
+.wx-facts li {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: 8px 32px;
+  padding-block: 28px;
+  border-bottom: 1px solid var(--rule);
+}
+.wx-facts h3 {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.wx-facts p {
+  color: var(--slush);
+}
+
+/* ---- How it works: three stops on a dashed road line ---------------------- */
+.wx-steps-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  gap: 16px 48px;
+}
+.wx-steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  margin-top: clamp(48px, 6vw, 80px);
+}
+.wx-steps::before {
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--asphalt) 0 28px,
+    transparent 28px 48px
+  );
+}
+.wx-step-num {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--asphalt);
+  color: var(--white);
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+  padding-top: 0.12em;
+  box-shadow: 0 0 0 10px var(--snow);
+}
+.wx-steps h3 {
+  margin-top: 28px;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.wx-steps p {
+  margin-top: 10px;
+  max-width: 30ch;
+  color: var(--slush);
+}
+.wx-steps-cta {
+  margin-top: clamp(48px, 6vw, 72px);
+}
+
+/* ---- Pricing: the one full colour field ----------------------------------- */
+.wx-pricing {
+  background: var(--amber);
+}
+.wx-pricing .wx-split {
+  grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  align-items: end;
+}
+.wx-price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 0.3em;
+  margin-top: clamp(28px, 3.5vw, 48px);
+  line-height: 1;
+}
+.wx-price-figure {
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 0.86;
+  letter-spacing: -0.025em;
+}
+.wx-price-tax {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+.wx-includes {
+  border-top: 2px solid var(--asphalt);
+}
+.wx-includes li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-block: 16px;
+  border-bottom: 1px solid rgba(30, 35, 38, 0.28);
+  font-size: 16px;
+  font-weight: 600;
+}
+.wx-includes svg {
+  flex: none;
+  width: 22px;
+  height: 22px;
+}
+.wx-pricing-close {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px 32px;
+  margin-top: 32px;
+  font-size: 18px;
+  font-weight: 800;
+}
+.wx-pricing :focus-visible {
+  outline-color: var(--asphalt);
+}
+
+/* ---- Service areas: city names as the visual ----------------------------- */
+.wx-areas .wx-split {
+  align-items: end;
+}
+.wx-areas .wx-lede {
+  margin-top: 24px;
+}
+.wx-cities {
+  border-top: 2px solid var(--asphalt);
+}
+.wx-cities li {
+  gap: 0.25em;
+  padding-block: 0.18em 0.08em;
+  border-bottom: 1px solid var(--rule);
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+.wx-cities .wx-pin {
+  width: 0.55em;
+  height: 0.55em;
+  color: var(--amber);
+  stroke-width: 2.6;
+}
+
+/* ---- FAQ ------------------------------------------------------------------- */
+.wx-faq {
+  background: var(--white);
+}
+.wx-faq .wx-split {
+  grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+}
+.wx-faq-head {
+  position: sticky;
+  top: calc(var(--nav) + 32px);
+}
+.wx-faq-list {
+  border-top: 2px solid var(--asphalt);
+}
+.wx-faq details {
+  border-bottom: 1px solid var(--rule);
+}
+.wx-faq summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-block: 22px;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.3;
+  cursor: pointer;
+  list-style: none;
+}
+.wx-faq summary::-webkit-details-marker {
+  display: none;
+}
+.wx-faq summary::after {
+  content: "";
+  flex: none;
+  width: 18px;
+  height: 18px;
+  background:
+    linear-gradient(var(--asphalt), var(--asphalt)) center / 18px 3px no-repeat,
+    linear-gradient(var(--asphalt), var(--asphalt)) center / 3px 18px no-repeat;
+  transition: transform 200ms ease-out;
+}
+.wx-faq details[open] summary::after {
+  transform: rotate(45deg);
+}
+.wx-faq summary:hover {
+  color: #000;
+}
+.wx-faq details p {
+  max-width: 60ch;
+  padding-bottom: 24px;
+  color: var(--slush);
+}
+
+/* ---- Closing --------------------------------------------------------------- */
+.wx-closing {
+  background: var(--asphalt);
+  color: var(--white);
+}
+.wx-closing h2 {
+  font-size: 58px;
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  max-width: 13ch;
+}
+.wx-closing-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 32px 48px;
+  margin-top: clamp(32px, 4vw, 56px);
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.wx-closing p {
+  color: rgba(255, 255, 255, 0.78);
+}
+.wx-closing .wx-closing-sub {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 800;
+}
+.wx-contact {
+  margin-top: 20px;
+}
+.wx-contact a {
+  display: inline-block;
+  margin-right: 24px;
+  color: var(--white);
+  font-weight: 700;
+  text-decoration-color: var(--amber);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* ---- Sticky booking bar (phones) ------------------------------------------ */
+.wx-sticky {
+  display: none;
+}
+
+/* ---- Responsive ------------------------------------------------------------ */
+@media (max-width: 960px) {
+  .wx-split,
+  .wx-pricing .wx-split,
+  .wx-faq .wx-split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .wx-faq-head {
+    position: static;
+  }
+  .wx-facts li {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .wx {
+    font-size: 15px;
+  }
+  .wx-hero h1,
+  .wx-closing h2 {
+    font-size: 36px;
+  }
+  .wx-h2,
+  .wx-cities li {
+    font-size: 28px;
+  }
+  .wx-lede {
+    font-size: 16px;
+  }
+  .wx-btn {
+    font-size: 14.4px;
+  }
+  .wx-wrap {
+    padding-inline: 16px;
+  }
+  .wx-price-figure {
+    font-size: 56px;
+  }
+  .wx-hero-row,
+  .wx-closing-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .wx-hero-action {
+    flex-wrap: wrap;
+  }
+  .wx-proof {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    gap: 4px;
+  }
+  .wx-proof::after {
+    left: calc(50% - 2px);
+    width: 4px;
+  }
+  .wx-proof figcaption {
+    left: 10px;
+    bottom: 10px;
+    font-size: 0.875rem;
+  }
+
+  .wx-steps {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+    padding-left: 96px;
+  }
+  .wx-steps::before {
+    top: 0;
+    bottom: 0;
+    left: 34px;
+    right: auto;
+    width: 4px;
+    height: auto;
+    background: repeating-linear-gradient(
+      180deg,
+      var(--asphalt) 0 28px,
+      transparent 28px 48px
+    );
+  }
+  .wx-steps li {
+    position: relative;
+  }
+  .wx-step-num {
+    position: absolute;
+    left: -96px;
+    top: -6px;
+  }
+  .wx-steps h3 {
+    margin-top: 0;
+  }
+
+  .wx-sticky {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 90;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+    background: var(--asphalt);
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    transition: transform 250ms ease-out, visibility 250ms;
+  }
+  .wx-sticky .wx-btn {
+    width: 100%;
+  }
+  .wx-sticky.is-hidden {
+    transform: translateY(110%);
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 420px) {
+  .wx-proof {
+    aspect-ratio: 1 / 1;
+  }
+  .wx-hero-action .wx-btn {
+    flex: 1 1 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .wx-h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wx {
+    font-size: 14px;
+  }
+  .wx-hero h1,
+  .wx-closing h2 {
+    font-size: 28px;
+  }
+  .wx-h2,
+  .wx-cities li {
+    font-size: 24px;
+  }
+  .wx-lede {
+    font-size: 14px;
+  }
+  .wx-facts h3,
+  .wx-steps h3 {
+    font-size: 16px;
+  }
+  .wx-btn {
+    font-size: 13.6px;
+  }
+  .wx-wrap {
+    padding-inline: 12px;
+  }
+  .wx-price-figure {
+    font-size: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wx-btn,
+  .wx-faq summary::after,
+  .wx-sticky {
+    transition: none;
+  }
+}
