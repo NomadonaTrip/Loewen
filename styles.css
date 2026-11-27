@@ -4395,6 +4395,47 @@ html:not(.js-nav) .nav-dropdown:focus-within .nav-submenu,
 .windrow-booked li {
   margin-bottom: 8px;
 }
+.windrow-booked .windrow-book-steps {
+  padding-left: 1.4em;
+  margin: 24px 0 32px;
+}
+.windrow-booked .windrow-book-steps li {
+  margin-bottom: 14px;
+  padding-left: 4px;
+}
+.windrow-booked .windrow-book-steps li::marker {
+  color: var(--text-cream);
+  font-weight: 600;
+}
+/* Small cream outline button next to the e-Transfer address */
+.windrow-copy {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  margin: 6px 8px 0 0;
+  padding: 4px 16px;
+  border: 1px solid var(--text-cream);
+  border-radius: 2rem;
+  background-color: transparent;
+  color: var(--text-cream);
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 500;
+  vertical-align: middle;
+}
+.windrow-copy:hover {
+  background-color: var(--text-cream);
+  color: var(--accent-green);
+  border: 1px solid var(--text-cream);
+}
+.windrow-copy:focus-visible {
+  outline: 2px solid var(--text-cream);
+  outline-offset: 3px;
+}
+.windrow-copy-status {
+  color: var(--text-cream);
+  font-size: 0.875rem;
+}
 
 /* ---- Wider screens ------------------------------------------------------- */
 @media screen and (min-width: 769px) {

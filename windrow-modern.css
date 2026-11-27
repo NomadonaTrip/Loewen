@@ -254,9 +254,9 @@ body.windrow-modern {
 }
 .wm .hero-photos img {
   height: clamp(300px, 48vw, 620px);
-  /* anchor to the bottom: keeps the cleared driveway in frame and the
-     (blurred) real-estate sign above the crop */
-  object-position: center bottom;
+  /* pair g: 35% keeps the garage and the whole ridge in frame and crops
+     most of the photographer's shadow off the bottom of "after" */
+  object-position: center 35%;
 }
 .wm .tag {
   position: absolute;
@@ -408,6 +408,10 @@ body.windrow-modern {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+/* two-step process: two equal columns (the phone rule below stacks them) */
+.wm .steps--two {
+  grid-template-columns: repeat(2, 1fr);
 }
 .wm .step {
   min-height: 235px;
