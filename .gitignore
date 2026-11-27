@@ -10,3 +10,5 @@ prompts/
 .claude/
 archives/
 docs/
+# Python build tool cache
+__pycache__/

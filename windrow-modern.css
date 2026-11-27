@@ -254,9 +254,8 @@ body.windrow-modern {
 }
 .wm .hero-photos img {
   height: clamp(300px, 48vw, 620px);
-  /* pair g: 35% keeps the garage and the whole ridge in frame and crops
-     most of the photographer's shadow off the bottom of "after" */
-  object-position: center 35%;
+  /* every photo is cropped to centre its windrow, so cover stays centred */
+  object-position: center;
 }
 .wm .tag {
   position: absolute;
@@ -364,6 +363,22 @@ body.windrow-modern {
 .wm .pair .tag {
   top: 10px;
   left: 10px;
+}
+/* Hover zoom: the photo grows inside its fixed, rounded frame; the frame,
+   switch and caption stay put. Mouse/trackpad only (no stuck zoom after a
+   tap), and not for visitors who reduce motion. Keyboard focus zooms too,
+   but via :focus-visible so a mouse click doesn't leave the tile zoomed. */
+.wm .pair .comparison img {
+  transition: transform 450ms ease-in-out;
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .wm .pair .comparison:hover img,
+  .wm .pair .comparison:has(:focus-visible) img {
+    transform: scale(1.1);
+    /* zoom-in only: 40% longer, with a longer ease-out so it settles softly;
+       zoom-out keeps the 450ms ease-in-out above */
+    transition: transform 630ms cubic-bezier(0.42, 0, 0.35, 1);
+  }
 }
 .wm .pair p {
   margin: 12px 0 0;
